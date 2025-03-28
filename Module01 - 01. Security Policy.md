@@ -18,3 +18,10 @@
 
 4.	**Microsoft Cloud Security Benchmark**를 클릭합니다. **Effect**가 **Audit**임을 확인합니다. 클라우드용 Microsoft Defender가 사용자 환경을 평가하고 데이터를 감사합니다. 사용자의 승인 없이는 적용되지 않습니다.
 
+### Lab 2: Explore Azure Policy
+1.	On Azure Portal, navigate to **Policy**. You can use the search box on the upper part for "Policy" or navigate to: https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyMenuBlade
+2.	From the left navigation pane, under the **Authoring** section, click on **Definitions** to explore the built-in policy definitions and initiatives.
+3.	From the top menu, use the filter button to set Category as **Security Center** and deselect **All**. Under **Definitions type**, select **Initiative** and deselect **All**.
+4.	You can now see built-in initiatives used by Microsoft Defender for Cloud, some in Preview.
+5. Notice the number of policies included in each initiative (policies column)
+6. Now exit.
