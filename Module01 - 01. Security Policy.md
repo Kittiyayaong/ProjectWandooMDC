@@ -18,10 +18,15 @@
 
 4.	**Microsoft Cloud Security Benchmark**를 클릭합니다. **Effect**가 **Audit**임을 확인합니다. 클라우드용 Microsoft Defender가 사용자 환경을 평가하고 데이터를 감사합니다. 사용자의 승인 없이는 적용되지 않습니다.
 
-### Lab 2: Explore Azure Policy
-1.	On Azure Portal, navigate to **Policy**. You can use the search box on the upper part for "Policy" or navigate to: https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyMenuBlade
-2.	From the left navigation pane, under the **Authoring** section, click on **Definitions** to explore the built-in policy definitions and initiatives.
-3.	From the top menu, use the filter button to set Category as **Security Center** and deselect **All**. Under **Definitions type**, select **Initiative** and deselect **All**.
-4.	You can now see built-in initiatives used by Microsoft Defender for Cloud, some in Preview.
-5. Notice the number of policies included in each initiative (policies column)
-6. Now exit.
+### Lab 2: Azure Policy 살펴보
+1.	Azure Portal에서 **Policy**를 검색한 후, **Authoring > Definitions**를 클릭합니다.
+2.	관련 azure policy를 모두 확인 가능합니다.
+
+### Lab 3: 권장 사항에 대한 리소스 면제 만들기
+리소스 면제를 사용하면 특정 리소스를 평가에서 면제할 수 있는 기능을 제공하여 권장 사항을 더욱 세밀하게 조정할 수 있습니다. 권장 사항으로 작업할 때 오른쪽에 있는 줄임표 메뉴를 클릭한 다음 면제 만들기를 선택하여 면제를 만들 수 있습니다.
+
+Tips. 면제는 추가 비용 없이 클라우드용 Microsoft Defender 고객에게 제공되는 프리미엄 Azure 정책 기능입니다. 다른 사용자의 경우 향후 요금이 부과될 수 있습니다.
+
+1. Azure Portal에서 Microsoft Defender for Cloud 검색 후 클릭
+2. **Recommendation** 클릭 후 리스트의 recommendation 중 한개 클릭 
+3. 
