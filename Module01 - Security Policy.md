@@ -1,4 +1,4 @@
-# Module 01 - 01. Security Policy 
+# Module 01 - Security Policy 
 
 ## 목표
 이 연습에서는 현재 클라우드용 Microsoft Defender의 보안 정책을 안내합니다. 이러한 보안 정책은 클라우드 보안 태세를 개선하는 데 도움이 되는 보안 표준 및 권장 사항으로 구성되어 있습니다. 보안 표준은 [Microsoft 클라우드 보안 벤치마크(MCSB)](https://learn.microsoft.com/en-us/azure/defender-for-cloud/concept-regulatory-compliance), 규정 준수 표준 및 사용자 지정 표준으로 구성됩니다. 
