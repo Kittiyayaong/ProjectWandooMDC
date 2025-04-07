@@ -43,7 +43,7 @@
     - Exemption Category: **Waiver** 
     - Provide a description: **Testing exemption capability – module 1**.
     - **Save** 클릭으로 저장 
-![image](https://github.com/user-attachments/assets/3d90973d-0ab0-42ca-a356-64bbba4e1be5)
+<img src="https://github.com/user-attachments/assets/3d90973d-0ab0-42ca-a356-64bbba4e1be5" alt="image" width="500" height="800">
 
 > ⭐ Tips: <br>
 *  **Mitigated** - 이 문제는 제안된 리소스와 다른 도구 또는 프로세스에서 처리되었으므로 리소스와 관련이 없습니다.
