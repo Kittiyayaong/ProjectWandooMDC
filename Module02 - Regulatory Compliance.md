@@ -58,6 +58,7 @@ AWS 또는 GCP에서 표준을 할당하려면 AWS 또는 GCP 연결을 선택�
 
 3. EDR 관련된 Recommendations를 추가 후 Review + Create를 합니다. 
 <img src="https://github.com/user-attachments/assets/899b8d12-dc00-4dbe-a45c-e59078d1a3ad3" alt="image" width="700" height="150">
+
 4. 새로 생성된 표준이 구독에 적용되는지 확인하려면 Regulatory Compliance 대쉬보드에서 **Status**로 정렬하세요.
 ![module4_customstandard](https://github.com/Azure/Microsoft-Defender-for-Cloud/assets/45104504/aba2680c-9d1e-4fae-bb98-63ea3627c9a4)
 
@@ -79,20 +80,10 @@ Microsoft Defender for Cloud에서는 규정 준수 표준에 대한 감사 보�
 2. 왼쪽에서 **Continuous Export** 클릭 후 **Log Analytics workspace**으로 이동 
 ![image](https://github.com/user-attachments/assets/e858eec8-1d7a-4050-afca-8bcc159a4bd2)
 
-3. Export enabled 토글을 **On**으로 설정 후, 다시 **Regulatory compliance**으로 이동 and choose **Select All**
-6.	From the export frequency options, select both **Streaming updates** and **Snapshots**.
-7.	Select target workspace and the Resource Group to be those you created earlier.
-9.	Select Save. You might get a message about Sentinel alerts connector already enabled. Click **Confirm**.
-10.	Wait for the first snapshot to occur. 
+3. Export enabled 토글을 **On**으로 설정 후, 하단의 Exported data type에서 **Regulatory compliance** 클릭 후 **Select All**
+![image](https://github.com/user-attachments/assets/7281e452-20fc-42d0-b39f-55c54dc54a3b)
 
-Compliance dashboard over time 
-1.	Go to Microsoft Defender for Cloud, and from the left navigation pane, under the **General** section, choose on the **Workbooks** button. 
-2.	Select **Compliance Over Time** workbook located under **Defender for Cloud**.
-3.	For the workspace, select **asclab-la-XXXXXXXXXX** 
-4.	For the subscription, select your subscription.
-5.	For the standard name, select **All**, and now you can see the workbook.
-![Regulatory compliance assessment and standards](../Images/lab4rc11.jpg?raw=true)
->Note 1: You need to complete the previous exercise of setting up Continuous Export to the Log Analytics workspace for the Compliance Over Time Workbook to work.
->Note 2: If you see the error below, you will need to wait for a week for this workbook to populate with data through Continuous Export.
-![Regulatory compliance assessment and standards](../Images/lab4rc12.gif?raw=true)
+4. Export Frequency는 **Streaming updates**와 **Snapshots** 모두 박스를 클릭하여 활성화합니다.
+5. Export Configuration에서 이전에 생성한 리소스 그룹을 선택합니다.
+6. 저장 시 Sentinel 알림 커넥터가 활성화가 필요하므로, 이번 Lab에서는 저장하지 않습니다.  
 
