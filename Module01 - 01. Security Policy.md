@@ -58,4 +58,3 @@
 7. 5번 step과 동일한 tab으로 이동 후 **Not Applicable resources** 탭을 열어 면제된 리소스를 검토합니다. 리소스를 이유/설명 값과 함께 확인할 수 있습니다.
 8. Azure portal에서 **policy** 검색 후 클릭 > Authoring > Exemptions로 이동합니다. 새로 생성한 **Exemption**이 리스트에 포함된 것을 확인합니다.
 
-### Lab 4: Create a custom recommendation - Create a custom initiative using KQL Query
