@@ -23,10 +23,39 @@
 2.	관련 azure policy를 모두 확인 가능합니다.
 
 ### Lab 3: 권장 사항에 대한 리소스 면제 만들기
-리소스 면제를 사용하면 특정 리소스를 평가에서 면제할 수 있는 기능을 제공하여 권장 사항을 더욱 세밀하게 조정할 수 있습니다. 권장 사항으로 작업할 때 오른쪽에 있는 줄임표 메뉴를 클릭한 다음 면제 만들기를 선택하여 면제를 만들 수 있습니다.
+리소스 면제를 사용하면 특정 리소스를 평가에서 면제할 수 있는 기능을 제공하여 권장 사항을 더욱 세밀하게 조정할 수 있습니다. 
 
-Tips. 면제는 추가 비용 없이 클라우드용 Microsoft Defender 고객에게 제공되는 프리미엄 Azure 정책 기능입니다. 다른 사용자의 경우 향후 요금이 부과될 수 있습니다.
+> ⭐ Tips: <br>
+> 면제는 추가 비용 없이 MDC 이용 고객에게 제공되는 프리미엄 Azure 정책 기능입니다. 다른 사용자의 경우 향후 요금이 부과될 수 있습니다.
 
 1. Azure Portal에서 Microsoft Defender for Cloud 검색 후 클릭
 2. **Recommendation** 클릭 후 리스트의 recommendation 중 한개 클릭 
-3. 
+3. 상단이ㅡ **view recommendation for all resources** 클릭
+![image](https://github.com/user-attachments/assets/973a7ebe-3723-4c72-98c4-7fe4cc71b9ba)
+
+4. Affected resources에서 **사용자 or 디바이스(리소스)** 클릭 후 **Exempt** 클릭
+![image](https://github.com/user-attachments/assets/523d67cc-7ec5-4a37-ad20-8cd4c39e10e4)
+
+5. The create **exemption pane** opens:
+   *	Exemption name: ACS - recommendation name 
+*	**expiration date** 박스 클릭으로 활성화 후, Date 설정 
+
+    - Exemption Category: **Waiver** 
+    - Provide a description: **Testing exemption capability – module 1**.
+    - **Save** 클릭으로 저장 
+![image](https://github.com/user-attachments/assets/3d90973d-0ab0-42ca-a356-64bbba4e1be5)
+
+> ⭐ Tips: <br>
+*  **Mitigated** - 이 문제는 제안된 리소스와 다른 도구 또는 프로세스에서 처리되었으므로 리소스와 관련이 없습니다.
+* **Waiver** - 이 리소스에 대한 위험을 수락합니다.
+* 예외를 설정하면 이 추천 사항이 포함된 모든 관리 표준에 대해 예외가 생성됩니다. 이는 특정 추천 사항에 대해 예외를 설정할 때, 해당 추천 사항이 적용되는 모든 관리 표준에 대해 동일한 예외가 적용된다는 것을 의미합니다. 예를 들어, Azure CSPM 표준에 포함된 추천 사항에 대해 예외를 설정하면, Azure CSPM 표준의 모든 관련 부분에 대해 예외가 생성됩니다.
+
+6. 설정을 적용되려면 최대 30분이 소요될 수 있습니다. 설정 이후에는 아래와 같은 효과가 나타납니다. 
+    - 해당 리소스는 보안 점수에 영향을 미치지 않습니다.
+    - 리소스가 권장 사항 세부 정보 페이지의 해당 없음 탭에 나열됩니다.
+    - 추천 세부정보 페이지 상단의 정보 스트립에 면제된 리소스 수가 나열됩니다
+
+7. 5번 step과 동일한 tab으로 이동 후 **Not Applicable resources** 탭을 열어 면제된 리소스를 검토합니다. 리소스를 이유/설명 값과 함께 확인할 수 있습니다.
+8. Azure portal에서 **policy** 검색 후 클릭 > Authoring > Exemptions로 이동합니다. 새로 생성한 **Exemption**이 리스트에 포함된 것을 확인합니다.
+
+### Lab 4: Create a custom recommendation - Create a custom initiative using KQL Query
