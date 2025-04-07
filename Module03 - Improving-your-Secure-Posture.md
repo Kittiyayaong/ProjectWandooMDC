@@ -1,4 +1,3 @@
-![image](https://github.com/user-attachments/assets/229a7aee-bf06-453a-88e2-464dcbea506f)# Module 3 - Improving your Secure Posture
 
 ## Secure Posture이란? 
 **보안 태세 (Security Posture)** 는 조직의 네트워크, 시스템, 절차의 전반적인 보안 상태를 나타내는 용어입니다. 이는 하드웨어, 소프트웨어, 데이터, 사용자 행동 전반에 걸친 보안 강점과 취약점을 종합적으로 보여주는 스냅샷입니다.
