@@ -1,4 +1,4 @@
-# Module 3 - Improving your Secure Posture
+![image](https://github.com/user-attachments/assets/229a7aee-bf06-453a-88e2-464dcbea506f)# Module 3 - Improving your Secure Posture
 
 ## Secure Posture이란? 
 **보안 태세 (Security Posture)** 는 조직의 네트워크, 시스템, 절차의 전반적인 보안 상태를 나타내는 용어입니다. 이는 하드웨어, 소프트웨어, 데이터, 사용자 행동 전반에 걸친 보안 강점과 취약점을 종합적으로 보여주는 스냅샷입니다.
@@ -47,10 +47,6 @@ az acr build --image sample/hello-world:v1 --registry <your container registry n
 6. Recommendatino에서 항목이 나타나기 위해, 스캔은 일반적으로 몇 분 이내에 완료되지만, 취약점/보안 결과가 권장 사항에 나타나려면 최대 15분이 걸릴 수 있습니다.
 ![image](https://github.com/user-attachments/assets/69540ca7-700f-4106-a28c-e0122dee9310)
 ![image](https://github.com/user-attachments/assets/343f16b6-0b24-428d-b61c-177aac511044)
-
-7. 완료 
-
-
 
 
 
