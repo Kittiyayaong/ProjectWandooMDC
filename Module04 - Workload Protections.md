@@ -26,3 +26,6 @@
 7.	rule expiration: Lab 하루 이후로 설정합니다.
 8.	**Apply** 클릭하고 새 규칙이 적용될 때까지 최대 10분 소요됩니다. 
 9.	Microsoft Defender for Cloud > General > Security Alerts > 상단의 supression rules를 클릭하여 들어가면, 생성한 rule이 리스트업 된 것을 확인 할 수 있습니다. 
+
+> ⭐ Tips: <br>
+>  Azure 정책에서 Microsoft Defender for Cloud 알림에 대한 억제 규칙을 구성하려면 Deploy-라는 기본 정책 정의를 사용하여 관리 그룹 수준에서 억제 규칙을 만들 수 있습니다. 구독 수준에서 알림을 억제하려면 Azure 포털 또는 REST API를 사용할 수 있습니다.
