@@ -32,3 +32,33 @@ Windows 10 Hyper-V 시스템. 이 가이드는 Windows 11에서도 작동합니�
 
 3. 기본 스위치(Default Switch)가 이미 설치되어 있지 않은 경우 [여기](https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/get-started/create-a-virtual-switch-for-hyper-v-virtual-machines?tabs=hyper-v-manager) 의 안내에 따라 설치하세요.
 
+## Lab 3: Hyper-V를 사용하여 Defender for DevOps를 통해 보호할 가상 온프레미스 서버 역할을 하는 VM(가상 머신)을 생성합니다.
+
+1. Hyper-V에서 **새로만들기 > Virtual Machine**을 클릭합니다.
+  ![image](https://github.com/user-attachments/assets/af252b06-136a-49ff-9fdd-c19ee0bd173e)
+
+2. **New Virtual Machine Wizard**에서 Next를 클릭합니다.
+ ![image](https://github.com/user-attachments/assets/1781f739-64c6-48a5-89ea-4cb2cb679931)
+
+3. VM에 **Arc Server Wandoo**로 이름을 설정하고, 기본 위치를 선택한 상태로 둡니다. 
+  ![image](https://github.com/user-attachments/assets/7fe617e5-32d1-4ea6-b551-e83374fb73f6)
+
+4. **세대 2**로 설정합니다.
+  ![image](https://github.com/user-attachments/assets/bb422820-1e91-476b-9237-8297e4fa13c4)
+
+5. 시작 메모리 할당 - 최소 메모리는 2048MB여야 하며, 권장 메모리는 4096MB입니다. 2048MB를 선택합니다.
+  ![image](https://github.com/user-attachments/assets/cf4e2b8c-626a-4dcd-8a38-59dd006dd3a5)
+
+6. **네트워크 구성**에서 **기본 스위치**를 선택합니다.
+   ![image](https://github.com/user-attachments/assets/dc862ffb-f34a-4c68-98a0-d050d159c694)
+
+7. **가상 하드 디스크 연결**에서 모든 기본값을 그대로 두고 **다음**을 클릭합니다.
+    ![image](https://github.com/user-attachments/assets/1f2ed205-b89e-4a6a-8f16-6bf7ff310f31)
+
+8. 사전에 다운로드 받은 ISO 이미지 파일을 올린 후 완료합니다. 
+   ![image](https://github.com/user-attachments/assets/a12ab94c-15e6-4501-8503-4d8bf3261429)
+
+
+## Lab 4: VM에 운영 체제 설치
+
+1. 오른쪽의 **액션** 창 아래에 있는 **하이퍼-V 매니저**의 **아크-서버** VM으로 이동합니다.
