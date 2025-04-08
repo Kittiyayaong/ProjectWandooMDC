@@ -1,4 +1,4 @@
-# Module - Protecting On-Prem Servers in Defender for Cloud 
+![image](https://github.com/user-attachments/assets/dcef90fe-bf12-4fbf-8ab2-6772f1095d2a)# Module - Protecting On-Prem Servers in Defender for Cloud 
 
 ## 목표
 이 연습에서는 Hyper-V("온프레미스 서버" 역할)를 사용하여 개인 클라이언트 컴퓨터에 서버를 배포한 후, Microsoft Defender for Cloud를 사용하여 서버를 보호하기위해 Azure Arc를 배포하는 방법을 배우게 됩니다.
@@ -82,4 +82,59 @@ Windows 10 Hyper-V 시스템. 이 가이드는 Windows 11에서도 작동합니�
 
 9. OS설치가 포함된 VM이 설치되고 있습니다.
    ![image](https://github.com/user-attachments/assets/27d31085-f0a0-4bb6-9f87-b14c30f092aa)
+
+10. VM의 password를 설정합니다.
+   ![image](https://github.com/user-attachments/assets/0dfc53f1-7222-41c0-85e8-0aaca14974e9)
+
+2. 디스플레이 구성은 환경에 맞게 설정한 후 연결합니다. 
+ ![image](https://github.com/user-attachments/assets/5f681a1b-e3d6-49f1-86a8-dd6187b3f2cb)
+
+## Lab 5: Azure Arc RP Setup하기 
+
+> ⭐ Azure ARC란? <br>
+> Azure Arc는 온프레미스, 멀티 클라우드, 엣지 환경을 포함한 모든 인프라에 Azure 관리 및 서비스를 확장하는 종합 솔루션입니다. 이를 통해 기존 non-Azure 및/또는 온프레미스 리소스를 Azure Resource Manager에 투영하여 전체 환경을 함께 관리할 수 있습니다. 여기에는 가상 머신, Kubernetes 클러스터 및 데이터베이스를 Azure에서 실행되는 것처럼 관리하는 것이 포함됩니다.
+
+> ⭐ Azure Arc RP (Resource Provider)란? <br>
+> Azure Arc Resource Provider (RP)는 Azure Resource Manager를 사용하여 Azure 외부에서 실행되는 서버를 관리할 수 있게 해줍니다. 각 서버는 Azure에서 하이브리드 컴퓨트 머신 리소스로 표현됩니다. 서버가 Azure Arc로 관리되면 확장을 사용하여 에이전트, 스크립트 또는 구성을 머신에 배포할 수 있습니다.
+
+> Azure Arc RP의 주요 기능:
+>  * 하이브리드 컴퓨트 API: Azure Arc 지원 서버 및 관련 확장을 생성, 목록화, 업데이트 및 삭제할 수 있습니다.
+>  * 사용자 정의 위치: Azure Arc 지원 데이터 서비스 RP는 kubeconfig를 사용하여 클러스터와 통신하고 사용자 정의 위치에 매핑된 네임스페이스에 Azure Arc 지원 데이터 서비스 유형의 사용자 정의 리소스를 생성합니다.
+
+1. Cloud shell을 Powershell로 엽니다. [Cloud Shell](https://portal.azure.com/#cloudshell/)
+2. [여기](https://learn.microsoft.com/en-us/azure/azure-arc/servers/prerequisites#azure-resource-providers) 로 이동하여 Powershell 명령을 복사하여 Azure Resource Provider를 등록합니다.
+![image](https://github.com/user-attachments/assets/826e5fd5-d263-42c2-99bb-bcb8468b875e)
+
+
+## Lab 6: 클라우드용 마이크로소프트 디펜더가 VM을 보호할 수 있도록 VM에 Azure Arc를 설치합니다
+
+* 전제 조건: Arc 설치를 위한 전제 조건을 확인하세요 [여기](https://learn.microsoft.com/en-us/azure/azure-arc/servers/learn/quick-enable-hybrid-vm#prerequisites)
+
+1. Azure portal에서 **Azure Arc**를 검색 > Azure Arc REsources > Machines > + Add/Create > Add a machine
+   ![image](https://github.com/user-attachments/assets/fc378e2f-2f81-4f3a-a75e-eca2b099ccb8)
+
+2. **Add a single server** 옵션에서 **Generate Script**를 클릭합니다.
+   ![image](https://github.com/user-attachments/assets/07e77e60-f9df-438f-8fa3-a74be26d9c58)
+
+3. Server Detail 정보를 기입합니다.
+   ![image](https://github.com/user-attachments/assets/38a95d54-b799-40e4-91b4-89d9abdc4d92)
+
+> ⭐ Tips: <br>
+> 연결 방법(connectivity method)의 경우 환경에 가장 적합한 방법을 선택하세요. 제 경우 테스트 서버이므로 퍼블릭 엔드포인트로 남겨두겠습니다.
+
+4. tag는 필요시 진행하며, 이번 랩에서는 skip합니다.
+5. 스크립트 다운로드 및 실행 페이지에서 스크립트를 클립보드에 복사합니다.
+   ![image](https://github.com/user-attachments/assets/fba2840c-b100-415f-8776-5cad29d40207)
+   
+7. Lab 4에서 생성한 VM으로 돌아가서 **PowerShell ISE**를 관리자 권한으로 실행합니다.
+   ![image](https://github.com/user-attachments/assets/262d3670-2443-4032-b7bd-32a4bdabc7eb)
+
+8. 이제 Powershell이 열렸으니 새 파일을 만들고 이전에 복사한 Arc 스크립트를 이 파일에 직접 붙여넣은 다음 실행을 누릅니다.
+
+9. 스크립트가 실행되면 VM의 기본 브라우저에 Azure 구독 인증을 요청하는 메시지가 표시됩니다(이 서버를 연결할 위치) Azure 구독에 로그인합니다.
+
+10. 스크립트가 완료되면 Azure Arc 에이전트가 서버에 배포되고 구성됩니다.
+
+> ⭐ Tips: <br>
+> Azure 구독은 약 24시간 후에 이 서버를 감지할 수 있습니다. 이 VM은 Azure에서 온프레미스 서버 역할을 하며, Microsoft Defender for Cloud의 보호를 받게 됩니다.
 
