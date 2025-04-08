@@ -8,6 +8,8 @@
 
 ## Modules
 
+![image](https://github.com/user-attachments/assets/91922c67-2a03-4e6f-b0ba-646a9ca4982d)
+
 ### ✅ CSPM (Cloud Security Posture Management)
 
  [**Module 01 - Security Policy**](https://github.com/Kittiyayaong/ProjectWandooMDC/blob/main/CSPM%20-%20Module01.%20Security%20Policy.md)
