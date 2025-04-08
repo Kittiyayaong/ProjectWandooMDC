@@ -8,7 +8,7 @@
 
 ## :test_tube: Modules
 
-### CSPM (Cloud Security Posture Management)
+### ⭐ CSPM (Cloud Security Posture Management)
 
 [**Module 01 - Security Policy**](https://github.com/Kittiyayaong/ProjectWandooMDC/blob/main/CSPM%20-%20Module01.%20Security%20Policy.md)
   * Lab 1: Microsoft Defender for cloud 정책 개요
@@ -38,7 +38,7 @@
   * Lab 1: 민감한 데이터 검색 활성화
   * Lab 2: Configure sensitive data categories
 
-### CWPP (Cloud Workload Protection Platform)
+### ⭐ CWPP (Cloud Workload Protection Platform)
 
 [**Module 1 - Agentless container vulnerability assessment scanning**](https://github.com/Kittiyayaong/ProjectWandooMDC/blob/main/CWPP%20-%20Module01.%20Agentless%20container%20vulnerability%20assessment%20scanning.md)
   * Lab 1: Install Docker Desktop
