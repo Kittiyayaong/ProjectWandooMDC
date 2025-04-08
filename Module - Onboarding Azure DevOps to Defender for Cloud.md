@@ -35,7 +35,7 @@ Azure DevOps는 소프트웨어 개발, 배포, 그리고 협업을 위한 종�
 5. 몇 분 후 **Environment Settings** 페이지에 Azure DevOps 커넥터가 표시되고 약 15분 후에는 총 리소스 수가 채워지는 것을 확인할 수 있습니다.
 
 
-### Lab 2: Microsoft Security DevOps Azure DevOps 확장 구성
+### (Optional) Lab 2: Microsoft Security DevOps Azure DevOps 확장 구성
 
 1.	dev.auzre.com에서 생성한 DevOps 계정으로 로그인합니다.
   ![image](https://github.com/user-attachments/assets/e0287583-cca9-4919-8545-bb976390f54b)
@@ -52,6 +52,5 @@ Azure DevOps는 소프트웨어 개발, 배포, 그리고 협업을 위한 종�
 5.	Azure DevOps Organization 선택 후, Install합니다. 
   ![image](https://github.com/user-attachments/assets/167a9980-afac-43a5-9c35-3daa8fd1d46a)
 
-6.	 you have it installed, you’ll notice the Extension under ‘Installed’ section in the organization level settings as shown the example below:
+6. 설치가 완료됩니다. 
 
-![Azure DevOps Connector - Extension](../Images/M14_Fig5.PNG?raw=true)
