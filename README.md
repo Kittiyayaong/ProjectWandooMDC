@@ -60,7 +60,7 @@
 [**Module 4 - AI Workloads**](https://github.com/Kittiyayaong/ProjectWandooMDC/blob/main/CWPP%20-%20Module04.%20AI%20Workloads.md)
   * Lab 1: AI 워크로드 활성화
 
-[**Module 5 - Module 05 - Defender for APIs**](https://github.com/Kittiyayaong/ProjectWandooMDC/edit/main/CWPP%20-%20Module06.%20Defender%20for%20APIs.md)
+[**Module 5 - Defender for APIs**](https://github.com/Kittiyayaong/ProjectWandooMDC/edit/main/CWPP%20-%20Module06.%20Defender%20for%20APIs.md)
   * Lab 1: AZURE API 관리 서비스 만들기
   * Lab 2: API 관리 내에서 API 게시하기
   * Lab 3: DEFENDER FOR API 활성화
