@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/0e4d386e-1947-47c8-9363-cfc8d91c74b5)![image](https://github.com/user-attachments/assets/cda8e6aa-bda7-431c-bc31-1e3bda08f30e)![image](https://github.com/user-attachments/assets/27ef06c2-43cd-4d90-9d5c-003d5fd805e7)# Module 7 - External Attack Surface Management
+# Module 7 - External Attack Surface Management
 
 ### 외부 공격 표면 관리 (External Attack Surface Mgmt)?
 외부 공격 표면(External Attack Surface)은 조직의 인터넷에 노출된 자산과 관련된 공격 포인트를 의미합니다. 이는 조직이 소유하거나 관리하는 모든 인터넷 연결 자산을 포함하며, 공격자가 악용할 수 있는 취약점과 노출을 포함합니다
