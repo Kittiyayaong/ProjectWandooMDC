@@ -1,4 +1,4 @@
-# Module 22 – Integration with Microsoft Defender for Endpoint
+# Module 6 – Integration with Microsoft Defender for Endpoint
 
 ### Lab 1: Microsoft Defender for Endpoint의 자동 배포 및 통합 활성화
 
