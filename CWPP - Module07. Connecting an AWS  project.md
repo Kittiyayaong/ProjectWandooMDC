@@ -1,4 +1,4 @@
-# Module 6 - Connecting an AWS  project
+# Module 7 - Connecting an AWS  project
 
 ### Lab 1: AWS 계정 만들기
 
