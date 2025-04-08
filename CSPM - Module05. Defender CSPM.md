@@ -45,7 +45,7 @@ Defender CSPM에서 제공하는 기능에 액세스하려면 구독에서 <a hr
 
 7. 발견된 나머지 공격 경로를 탐색하고 완료합니다.
 
-## Lab 4: Cloud Security Explorer를 위한 Build Query
+## Lab 3: Cloud Security Explorer를 위한 Build Query
 
 1. MDC > Cloud Security Explorer로 이동
 2. “Internet exposed VMs with high severity vulnerabilities” 템플릿을 찾아 클릭하면, 심각도가 높은 취약성을 가진 VM 목록을 찾을 수 있습니다. 
