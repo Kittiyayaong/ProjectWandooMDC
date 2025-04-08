@@ -89,5 +89,8 @@
 14. 변경사항 저장 이후에 S3 Console bucket에 올라오기까지 24시간이 소요됩니다. (계정 스냅샷 24h마다 업데이트)
 
 
- 
+### Clean-up AWS Resources
+1. AWS Console > Cloud Formation console > 생성한 Stack 클릭 후 Delete
+   ![image](https://github.com/user-attachments/assets/a2e6f872-d344-4d43-8f47-d8331d8237c9)
+
 
