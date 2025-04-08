@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/46baf921-d267-40e7-bec2-d583f4356cec)![image](https://github.com/user-attachments/assets/571d8ed0-d6f2-45e7-a9b6-f9581280a94e)![image](https://github.com/user-attachments/assets/d1418bda-d064-440c-b7de-3747e4c5ab21)![image](https://github.com/user-attachments/assets/20ffba42-ad20-45ab-bd94-a1d5a18bcb9c)![image](https://github.com/user-attachments/assets/65b75cd2-e8a8-4686-8bb7-9efa04d9bc20)![image](https://github.com/user-attachments/assets/d507d569-13bd-493d-87ee-e3ff31eeb866)![image](https://github.com/user-attachments/assets/964f32e0-2bab-44b5-bf2b-a30631ecd9ed)# Module 7 - External Attack Surface Management
+# Module 7 - External Attack Surface Management
 
 ## Lab 1: 리소스 생성하기
 1. Azure portal > Defender EASM 검색 후 클릭 > + create
@@ -35,14 +35,15 @@
 
 > ⭐ Tips: <br>
 > 일회성 검색 실행의 경우 ‘Never’을 선택합니다. 검색은 알려진 인프라와 관련된 새 자산을 지속적으로 검색하도록 설계되므로 기본 주기를 주간으로 유지하는 것이 좋습니다. 나중에 검색 그룹 세부 정보 페이지에서 "편집" 옵션을 선택하여 recurring frequency를 편집할 수 있습니다.
-![image](https://github.com/user-attachments/assets/62419ec6-c8bd-46b9-af4e-52f0ad00f632)
 
 4-1. Quick Start를 통해 Seed 설정하기 (Option 1) 
+
 이 Discovery group에 사용할 시드를 선택합니다. 빠른 시작 옵션을 사용하면 미리 채워진 공격 표면 목록에서 조직을 검색할 수 있습니다. 조직에 속한 알려진 자산을 기반으로 검색 그룹을 빠르게 만들 수 있습니다.
   ![image](https://github.com/user-attachments/assets/77c4e1a0-2e37-4dc5-bfa3-764d1fe750c6)
   ![image](https://github.com/user-attachments/assets/b9d084f1-c4d4-4663-97b1-a64a442dc3be)
 
 4-2. 시드 수동 설정하기 (Option 2)
+
 Defender EASM은 조직 이름, 도메인, IP 블록, 호스트, 메일 연락처, ASN 및 WhoIs 조직을 시드 값으로 허용합니다.
 또한 자산 검색에서 제외할 엔터티를 지정하여 검색된 경우 인벤토리에 추가되지 않도록 할 수도 있습니다. 예를 들어 제외는 중앙 인프라에 연결될 가능성이 높지만 조직에 속하지 않는 자회사가 있는 조직에 유용합니다. 시드 선택 후  Review + Create 클릭합니다. 
   ![image](https://github.com/user-attachments/assets/3fe0a14f-0f2b-407c-832f-332fccc8a55a)
@@ -66,12 +67,15 @@ EASM 사용자가 사전 정의된 매개변수에 따라 특정 작업을 자�
   * 인벤토리에서 제거: 필요에 따라 자산을 인벤토리에서 제거할 수 있습니다.
   * 정책이 정의되면 자동으로 실행되어 인벤토리가 사용자의 특정 요구에 따라 분류되도록 합니다. 이를 통해 최소한의 수작업으로 비즈니스 컨텍스트를 대량으로 인벤토리에 적용할 수 있습니다
 
-1. 정책 추가하기 
-Defender EASM 리소스 내 왼쪽 탐색 창의 관리 섹션에서 정책을 선택하여 정책 페이지로 이동합니다.
-+ 정책 추가를 선택합니다. 팝업된 오른쪽 창에서 Query가 없는 상태이므로, query를 생성합니다.
+
+1. 정책 추가하기
+
+Defender EASM 리소스 내 왼쪽 탐색 창의 관리 섹션에서 정책을 선택하여 정책 페이지로 이동합니다. + 정책 추가를 선택합니다. 팝업된 오른쪽 창에서 Query가 없는 상태이므로, query를 생성합니다.
   ![image](https://github.com/user-attachments/assets/f91be512-8530-4862-82f0-8ee9a5f63362)
 
-2. Query 생성하기 자산 상태가 "Requires Investigation"인 자산을 필터링하고, 해당 자산을 인벤토리에서 제거하는 작업을 수행합니다. 이를 통해 추가 조사가 필요한 자산을 효과적으로 관리하고, 인벤토리를 최신 상태로 유지할 수 있습니다.
+2. Query 생성하기
+
+자산 상태가 "Requires Investigation"인 자산을 필터링하고, 해당 자산을 인벤토리에서 제거하는 작업을 수행합니다. 이를 통해 추가 조사가 필요한 자산을 효과적으로 관리하고, 인벤토리를 최신 상태로 유지할 수 있습니다.
   ![image](https://github.com/user-attachments/assets/680954a8-667a-412c-b490-7f98926c9752)
 
 3. 생성한 query와 action 값을 넣고 생성합니다.
