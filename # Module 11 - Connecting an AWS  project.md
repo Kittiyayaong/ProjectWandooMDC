@@ -26,13 +26,23 @@
    ![image](https://github.com/user-attachments/assets/8991c9f0-74df-4362-ae03-b8eeb6efc3f0)
    ![image](https://github.com/user-attachments/assets/63542f84-731d-400f-a259-d8b3ae69e26e)
 
-6. 스택 생성 클릭 후, 4번에서 다운로드 받은 **CloudFOrmation 템플릿**파일을 업로드합니다.
-   ![image](https://github.com/user-attachments/assets/77ae6b74-c0df-495a-84c0-cfd5a7615151)
+6. [StackSet](https://eu-north-1.console.aws.amazon.com/cloudformation/home?region=eu-north-1#/stacksets) 클릭 후, 우측상단에 **StackSet 만들기**를 클릭해 생성을 시합니다. 4번에서 다운로드 받은 **CloudFOrmation 템플릿**파일을 업로드합니다.
+   ![image](https://github.com/user-attachments/assets/7b95767f-d139-468c-a8bd-fa13429706b3)
 
-7. Stack 이름을 지정하고, 나머지는 Default 값으로 지정합니다. 
+7. StackSet 이름을 지정하고, 나머지는 Default 값으로 지정합니다. 
    ![image](https://github.com/user-attachments/assets/11dcaba2-218d-40c8-8bea-c99d45fb8a11)
 
 8. 검토 후 생성하여 AWS Stack 생성을 완료합니다.
 
+> ⭐ AWS Stack이란? : <br>
+> AWS Stack은 AWS CloudFormation을 사용하여 여러 AWS 리소스를 단일 단위로 관리하는 기능입니다. 스택을 생성, 업데이트 및 삭제할 수 있으며, 이를 통해 인프라를 코드로 정의하고 자동화된 방식으로 배포할 수 있습니다. AWS Stack은 Azure의 Azure Resource Manager (ARM) 템플릿과 매우 유사한 개념입니다. 두 서비스 모두 인프라를 코드로 정의하고, 이를 통해 클라우드 리소스를 자동화된 방식으로 배포하고 관리할 수 있게 해줍니다.
+
+> ⭐ AWS StackSet이란? : <br>
+> AWS StackSet은 AWS CloudFormation의 기능을 확장하여 여러 계정과 리전에 걸쳐 스택을 생성, 업데이트 및 삭제할 수 있게 해주는 기능입니다. 이를 통해 단일 작업으로 여러 계정과 리전에 걸쳐 스택을 관리할 수 있습니다
+
 9. Azure로 돌아와, StackSet name을 입력 후 Create하여 완료합니다. 
     ![image](https://github.com/user-attachments/assets/4a4c5a0d-68cf-4eb4-a79f-c400a43044b4)
+
+10. Environment Setting에서 새롭게 추가된 AWS account 정보를 볼 수 있습니다.
+    ![image](https://github.com/user-attachments/assets/8055e8b0-6547-4668-b1aa-a675d8d27598)
+
