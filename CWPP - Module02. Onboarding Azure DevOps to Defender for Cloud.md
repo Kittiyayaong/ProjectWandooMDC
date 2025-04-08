@@ -1,4 +1,4 @@
-# Module – Onboarding Azure DevOps to Defender for Cloud
+# Module 2 – Onboarding Azure DevOps to Defender for Cloud
 
 ## 목표
 이번 연습에서는 Azure DevOps 저장소를 Defender for Cloud에 연결하는 방법을 배우게 됩니다.
