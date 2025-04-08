@@ -1,4 +1,20 @@
-# Module 7 - External Attack Surface Management
+![image](https://github.com/user-attachments/assets/0e4d386e-1947-47c8-9363-cfc8d91c74b5)![image](https://github.com/user-attachments/assets/cda8e6aa-bda7-431c-bc31-1e3bda08f30e)![image](https://github.com/user-attachments/assets/27ef06c2-43cd-4d90-9d5c-003d5fd805e7)# Module 7 - External Attack Surface Management
+
+### 외부 공격 표면 관리 (External Attack Surface Mgmt)?
+외부 공격 표면(External Attack Surface)은 조직의 인터넷에 노출된 자산과 관련된 공격 포인트를 의미합니다. 이는 조직이 소유하거나 관리하는 모든 인터넷 연결 자산을 포함하며, 공격자가 악용할 수 있는 취약점과 노출을 포함합니다
+* 인터넷에 노출된 자산: 웹 애플리케이션, 서드파티 종속성, 웹 인프라 등 조직이 소유한 모든 인터넷 연결 자산을 포함
+* Shadow IT 및 레거시 서비스: 조직의 IT 부서가 모르는 자산과 여전히 온라인에서 운영되고 있는 레거시 서비스
+   ![image](https://github.com/user-attachments/assets/ba6421b9-9aa9-41bf-8dab-51b014112921)
+
+### EASM 동작 과정 및 원리
+Microsoft Defender EASM은 Azure의 일부로, Azure에 앱으로 추가할 수 있습니다. 구독을 설정하고 앱을 실행하면, 자동화된 시스템이 조직과 관련된 자산을 식별합니다. 사용자는 도메인, ASM, IP 블록 등 “시드＂를 시스템에 입력할 수 있으며, 시스템은 며칠 동안 이 시드와 연결된 모든 자산을 식별합니다. 이를 통해 전체 공격 표면의 그림을 그릴 수 있습니다. 
+   ![image](https://github.com/user-attachments/assets/1bac10c6-c180-4e8b-b4c6-0ab2a05051e0)
+
+### 주요 개념 및 용어
+* 발견 (Discovery): 공격 표면은 지속적으로 변화합니다. EASM은 지속적으로 새로운 자산을 식별하여 인벤토리에 추가하고 관리합니다.
+* 인벤토리 (Inventory): 모든 자산을 검색할 수 있는 영역으로, 필터를 사용하여 자산을 검색할 수 있습니다.
+* 자산 (Assets): IP 주소, IP 블록, 호스트, 도메인, 페이지, SSL 인증서, 자율 시스템 번호(ASN), Whois 연락처 등을 포함합니다.
+* 필터 (Filter): 인벤토리에서 정의된 기준에 맞는 자산을 반환하는 검색 기능입니다.
 
 ### Lab 1: 리소스 생성하기
 1. Azure portal > Defender EASM 검색 후 클릭 > + create
