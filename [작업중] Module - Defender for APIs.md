@@ -58,4 +58,8 @@ Azure 포털에서 직접 API 작업을 호출할 수 있으므로 작업을 보
 ### Lab 4: ONBOARD APIS TO DEFENDER FOR APIS
 해당 API를 Defender for API에 의해 보호되도록 온보딩합니다.
 
-1. MDC > Recommendations > Defender for APIs 
+1. MDC > Recommendations > **Defender for APIs** 검색해서 클릭
+   ![image](https://github.com/user-attachments/assets/a08c4fa6-1d4c-4819-9045-9dc1b4ad44ad)
+
+2. 
+
