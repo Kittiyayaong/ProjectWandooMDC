@@ -1,6 +1,6 @@
 # Module 7 - External Attack Surface Management
 
-## Lab 1: 리소스 생성하기
+### Lab 1: 리소스 생성하기
 1. Azure portal > Defender EASM 검색 후 클릭 > + create
    ![image](https://github.com/user-attachments/assets/51d16f46-d335-4c4c-8840-dc9e9ef3712e)
 
@@ -20,7 +20,7 @@
   ![image](https://github.com/user-attachments/assets/59198b4d-6456-4a4b-82b6-431dc171e420)
 
 
-## Lab 2: Discovery 그룹생성 및 실행 주기 설정
+### Lab 2: Discovery 그룹생성 및 실행 주기 설정
 1. 왼쪽 창의 관리 아래에서 검색을 선택합니다.
   ![image](https://github.com/user-attachments/assets/c55f3d87-01bd-42a6-ae2f-0b530200f67b)
 
@@ -55,9 +55,9 @@ Defender EASM은 조직 이름, 도메인, IP 블록, 호스트, 메일 연락�
   ![image](https://github.com/user-attachments/assets/0160f3a4-cd87-4428-9b18-59885eaf8906)
 
 
-## Lab 3: 정책엔진 자동화
+### Lab 3: 정책엔진 자동화
 
-### 정책 엔진?
+#### 정책 엔진?
 EASM 사용자가 사전 정의된 매개변수에 따라 특정 작업을 자동화할 수 있도록 합니다. 이를 통해 자산에 레이블을 적용하거나 상태를 변경하는 등의 작업을 자동화하여 공격 표면을 관리할 수 있습니다.
 
 * 주요 기능
