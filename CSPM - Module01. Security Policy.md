@@ -18,7 +18,7 @@ Microsoft Defender for Cloud를 시작하려면 Microsoft Azure를 구독해야 
 
 4.	**Microsoft Cloud Security Benchmark**를 클릭합니다. **Effect**가 **Audit**임을 확인합니다. 클라우드용 Microsoft Defender가 사용자 환경을 평가하고 데이터를 감사합니다. 사용자의 승인 없이는 적용되지 않습니다.
 
-### Lab 2: Azure Policy 살펴보
+### Lab 2: Azure Policy 살펴보기
 1.	Azure Portal에서 **Policy**를 검색한 후, **Authoring > Definitions**를 클릭합니다.
 2.	관련 azure policy를 모두 확인 가능합니다.
 
