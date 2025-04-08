@@ -61,4 +61,25 @@ Windows 10 Hyper-V 시스템. 이 가이드는 Windows 11에서도 작동합니�
 
 ## Lab 4: VM에 운영 체제 설치
 
-1. 오른쪽의 **액션** 창 아래에 있는 **하이퍼-V 매니저**의 **아크-서버** VM으로 이동합니다.
+1. Hyper-V 관리자의 우측 하단에서 **연결**을 클릭합니다.
+   ![image](https://github.com/user-attachments/assets/6bf2910f-328d-4ba6-8f46-850314799c65)
+2. 가상 머신 연결 팝업이 나타나면 **시작**을 클릭합니다.
+  ![image](https://github.com/user-attachments/assets/bd69a616-ed96-42d6-95cc-5195452a56ce)
+3. 이제 스페이스 바와 같은 키보드의 아무 키나 누르고 약 1분 정도 기다린 후, Boot manager가 뜨면 **Enter**을 누릅니다. 그런 다음 **Microsoft Server 운영 체제 설정**이 나타나면 기본값을 그대로 두고 **다음**을 클릭합니다.
+   ![image](https://github.com/user-attachments/assets/4bf6f3dc-ebb3-41e1-b684-bc4a1d7b0687)
+
+5. 모든 설정을 Default로 Install 합니다.
+   ![image](https://github.com/user-attachments/assets/c4a9b596-9476-4e42-9793-ad69374ebe60)
+
+6. Windwos Server 2022 Standard Evaluation (Desktop Experience)를 클릭합니다. 
+  ![image](https://github.com/user-attachments/assets/a1bae6c4-277c-45d3-81c3-a096985f0a86)
+
+7. Terms and COndition을 Accept하고, **Custom**으로 설정합니다. 
+   ![image](https://github.com/user-attachments/assets/fc63da6e-c0bb-46b5-88d7-c1a33891e617)
+
+8. Default Drive 상태로 유지하고 넘어갑니다.
+   ![image](https://github.com/user-attachments/assets/9674b05f-fddb-46ba-bcda-6139012e4562)
+
+9. OS설치가 포함된 VM이 설치되고 있습니다.
+   ![image](https://github.com/user-attachments/assets/27d31085-f0a0-4bb6-9f87-b14c30f092aa)
+
