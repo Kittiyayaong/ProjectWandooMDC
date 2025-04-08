@@ -67,7 +67,7 @@
   * Lab 3: Hyper-V를 사용하여 Defender for DevOps를 통해 보호할 가상 온프레미스 서버 역할을 하는 VM(가상 머신)을 생성
   * Lab 4: VM에 운영 체제 설치
   * Lab 5: Azure Arc RP Setup하기
-  * Lab 6: Defender for Cloud가 VM을 보호할 수 있도록 VM에 Azure Arc를 
+  * Lab 6: VM에 Azure Arc 연결
 
 [**Module 4 - AI Workloads**](https://github.com/Kittiyayaong/ProjectWandooMDC/blob/main/CWPP%20-%20Module04.%20AI%20Workloads.md)
   * Lab 1: AI 워크로드 활성화
