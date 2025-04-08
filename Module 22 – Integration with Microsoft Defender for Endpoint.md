@@ -7,4 +7,13 @@
 Defender for Endpoint는 위협을 감지하자마자 Microsoft Defender for Cloud와 Microsoft 365 Defender에 표시되는 보안 경고를 트리거합니다. Microsoft Defender for Cloud에서 Defender for Endpoint 콘솔로 이동하여 자세한 조사를 수행하여 공격 범위를 파악할 수도 있습니다.
 > * 두 개의 서버용 Defender 요금제 중 하나를 활성화하면 Microsoft Defender for Endpoint 및 Microsoft Defender 취약성 관리와의 통합이 기본적으로 활성화됩니다.
 
-1. MDC > Environment settings > 하단에 테스트 대상 subscription > Servers
+1. MDC > Environment settings > 하단에 테스트 대상 subscription > Servers > Setting > **Endpoint protection**과 **Vulnerability assessment for machines** 모두 **On**으로 설정합니다.
+   [image](https://github.com/user-attachments/assets/8889989c-0eb9-4bea-b69a-0a112772cce5)
+
+2. Save
+
+> ⭐ Tips: <br>
+> * Microsoft Defender for Endpoint와의 통합을 활성화하면 Microsoft Defender for Cloud는 Windows 및 Linux Azure VM과 Azure Arc 지원 서버를 실행하는 비Azure 머신에 MDE.Windows 및 MDE.Linux 확장을 자동으로 배포합니다. 확장이 배포되는 즉시 온보딩 패키지가 머신을 분석하고, Defender for Endpoint를 감지하고 Microsoft Defender for Cloud와 통합되도록 재구성합니다.
+
+> ⭐ Tips: <br>
+> MDE 에이전트의 온보딩은 한 시간 이내에 시작지만, **Machines should have vulnerability findings resolved** 권장 사항에 취약점 평가 결과가 표시되기까지 최대 12시간이 소요될 수 있습니다. 
