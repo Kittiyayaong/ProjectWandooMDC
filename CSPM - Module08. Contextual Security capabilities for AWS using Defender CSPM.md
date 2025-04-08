@@ -86,5 +86,8 @@
 14. **모든 퍼블릭 엑세스 차단** 박스 활성화 후 변경사항 저장 
     ![image](https://github.com/user-attachments/assets/ba1eac96-07e8-4320-becf-18e80762e644)
 
-14. 설정 완료
+14. 변경사항 저장 이후에 S3 Console bucket에 올라오기까지 24시간이 소요됩니다. (계정 스냅샷 24h마다 업데이트)
+
+
+ 
 
