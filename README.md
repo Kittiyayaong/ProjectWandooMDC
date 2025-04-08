@@ -38,6 +38,14 @@
    * Lab 1: 민감한 데이터 검색 활성화
    * Lab 2: Configure sensitive data categories
 
+[**Module 7 - External Attack Surface Management**](https://github.com/Kittiyayaong/ProjectWandooMDC/blob/main/CSPM%20-%20Module07.%20EASM.md)
+ * Lab 1: 리소스 생성하기
+ * Lab 2: Discovery 그룹생성 및 실행 주기 설정
+ * Lab 2: Discovery 그룹생성 및 실행 주기 설정
+
+
+
+
 ### ✅ CWPP (Cloud Workload Protection Platform)
 
 [**Module 1 - Agentless container vulnerability assessment scanning**](https://github.com/Kittiyayaong/ProjectWandooMDC/blob/main/CWPP%20-%20Module01.%20Agentless%20container%20vulnerability%20assessment%20scanning.md)
