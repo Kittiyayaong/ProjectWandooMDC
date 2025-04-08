@@ -106,7 +106,7 @@ Windows 10 Hyper-V 시스템. 이 가이드는 Windows 11에서도 작동합니�
 ![image](https://github.com/user-attachments/assets/826e5fd5-d263-42c2-99bb-bcb8468b875e)
 
 
-## Lab 6: 클라우드용 마이크로소프트 디펜더가 VM을 보호할 수 있도록 VM에 Azure Arc를 설치합니다
+## Lab 6: Defender for Cloud가 VM을 보호할 수 있도록 VM에 Azure Arc를 설치합니다
 
 * 전제 조건: Arc 설치를 위한 전제 조건을 확인하세요 [여기](https://learn.microsoft.com/en-us/azure/azure-arc/servers/learn/quick-enable-hybrid-vm#prerequisites)
 
