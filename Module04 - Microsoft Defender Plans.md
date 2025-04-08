@@ -5,9 +5,9 @@
 1.	Microsoft Defender for Cloud > General > Security Alerts으로 이동합니다. 
 2.	Container에 대한 경고 시뮬레이션 생성:
     - 우측 상단에 **Sample alerts** 클릭합니다. 
-    - 테스트 할 Subscription과 Defender for cloud plan에서 **Container**을 선택합니다. 
-
-![Create sample virtual machine security alerts](../Images/asc-create-sample-security-alerts-vm.gif?raw=true)
+    - 테스트 할 Subscription과 Defender for cloud plan에서 **Container**을 선택합니다.
+    
+    ![image](https://github.com/user-attachments/assets/bc36ca91-0687-459a-879a-5d6aa13f15ef)
 
 3. 샘플 알림 생성이 진행 중이며 프로세스가 완료될 때까지 기다립니다. 알림 센터를 열거나 활동 로그에서 진행 상황을 추적할 수 있습니다(이 프로세스는 보통 완료하는 데 2분이 걸립니다)
 4. 이제 알림 페이지에서 샘플 이벤트를 볼 수 있습니다. 
