@@ -6,9 +6,9 @@
 * Shadow IT 및 레거시 서비스: 조직의 IT 부서가 모르는 자산과 여전히 온라인에서 운영되고 있는 레거시 서비스
    ![image](https://github.com/user-attachments/assets/ba6421b9-9aa9-41bf-8dab-51b014112921)
 
-### EASM 동작 과정 및 원리
-Microsoft Defender EASM은 Azure의 일부로, Azure에 앱으로 추가할 수 있습니다. 구독을 설정하고 앱을 실행하면, 자동화된 시스템이 조직과 관련된 자산을 식별합니다. 사용자는 도메인, ASM, IP 블록 등 “시드＂를 시스템에 입력할 수 있으며, 시스템은 며칠 동안 이 시드와 연결된 모든 자산을 식별합니다. 이를 통해 전체 공격 표면의 그림을 그릴 수 있습니다. 
-   ![image](https://github.com/user-attachments/assets/1bac10c6-c180-4e8b-b4c6-0ab2a05051e0)
+### EASM 동작 과정 및 원리 
+ ![image](https://github.com/user-attachments/assets/1bac10c6-c180-4e8b-b4c6-0ab2a05051e0)
+ Microsoft Defender EASM은 Azure의 일부로, Azure에 앱으로 추가할 수 있습니다. 구독을 설정하고 앱을 실행하면, 자동화된 시스템이 조직과 관련된 자산을 식별합니다. 사용자는 도메인, ASM, IP 블록 등 “시드＂를 시스템에 입력할 수 있으며, 시스템은 며칠 동안 이 시드와 연결된 모든 자산을 식별합니다. 이를 통해 전체 공격 표면의 그림을 그릴 수 있습니다.
 
 ### 주요 개념 및 용어
 * 발견 (Discovery): 공격 표면은 지속적으로 변화합니다. EASM은 지속적으로 새로운 자산을 식별하여 인벤토리에 추가하고 관리합니다.
