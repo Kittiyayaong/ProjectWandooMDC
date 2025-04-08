@@ -1,5 +1,15 @@
 # Module 04 - Microsoft Defender Plans
 
+## Defender Plan이란? 
+Defender Plan은 Microsoft Defender for Cloud의 다양한 보안 기능을 활성화하여 클라우드 환경의 보안 태세를 강화하는 계획입니다. 각 Defender Plan은 특정 유형의 리소스에 대한 보안 기능을 제공하며, 이를 통해 클라우드 리소스를 보호하고 관리할 수 있습니다.
+
+* Defender Plan에는 다음이 포함됩니다:
+    * Defender for Servers: Windows 및 Linux 서버에 대한 예방적 보호, 침해 후 탐지, 자동화된 조사 및 대응 기능을 제공합니다
+    * Defender for Containers: 컨테이너 이미지의 취약성 평가 및 보안 권장 사항을 제공합니다.
+    * Defender for SQL: SQL 데이터베이스에 대한 보안 평가 및 권장 사항을 제공합니다.
+    * Defender for Storage: 스토리지 계정에 대한 악성 코드 스캔 및 민감한 데이터 발견 기능을 포함합니다.
+    * Defender for Key Vault: Key Vault 리소스에 대한 보안 평가 및 권장 사항을 제공합니다
+
 ### Lab 1: 경고 검증(Alert validation)
 
 1.	Microsoft Defender for Cloud > General > Security Alerts으로 이동합니다. 
