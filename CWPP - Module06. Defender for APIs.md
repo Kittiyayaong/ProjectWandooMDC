@@ -1,7 +1,5 @@
-Module-13-Defender for APIs.md
+# Module 06 - Defender for APIs.md
 
-
-# Module - Defender for APIs
 ## Objectives
 
 이번 연습에서는 Azure API 관리를 통해 Defender for API를 활성화하고, Defender for API 기능을 활용하는 방법을 배우게 됩니다.
