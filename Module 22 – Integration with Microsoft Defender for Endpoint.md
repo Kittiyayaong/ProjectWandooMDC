@@ -17,3 +17,27 @@ Defender for Endpoint는 위협을 감지하자마자 Microsoft Defender for Clo
 
 > ⭐ Tips: <br>
 > MDE 에이전트의 온보딩은 한 시간 이내에 시작지만, **Machines should have vulnerability findings resolved** 권장 사항에 취약점 평가 결과가 표시되기까지 최대 12시간이 소요될 수 있습니다. 
+
+
+### Lab 2: Direct 온보딩을 통해 on-premises server를 연결
+
+Lab 1의 온보딩 시나리오에서는 Defender for Cloud의 백엔드 프로세스가 Microsoft Defender for Endpoint를 non-Azure 컴퓨터에 배포할 수 있도록 Azure Arc를 먼저 설치해야 하지만, Defender for Cloud는 Defender for Endpoint의 백엔드 서버를 감지하여 두 서비스 간의 백엔드 통합을 통해 Defender for Cloud에 연결할 수 있는 또 다른 기능인 직접 온보딩을 제공합니다.
+
+1. MDC > Environment settings > Direct onboarding 클릭
+   ![image](https://github.com/user-attachments/assets/79c4b500-e056-4d59-94fd-484f67d3b61a)
+
+2. Direct Onboarding **ON**으로 설정하고, 테스트 Subscription을 설정합니다.
+   ![image](https://github.com/user-attachments/assets/62efaed5-a951-45e5-b1f3-ca1692dcac6e)
+
+#### Lab 2-1. 지정된 구독에서 직접 온보딩을 활성화하기 전에 Defender for Servers가 아직 활성화되지 않은 경우 
+
+Defender for Cloud는 이 구독에서 Defender for Servers Plan 1을 자동으로 활성화합니다. 다음 단계로 Defender for Cloud는 이제 [Defender for Endpoint backend](https://security.microsoft.com 의 모든 서버를 감지하여 Defender for Cloud에 연결합니다. 
+
+1. Security.microsoft.com (Defender Console)에 로그인 > Settings > Endpoints > Device Management > Onboarding 를 통해서 진행합니다.
+   ![image](https://github.com/user-attachments/assets/9dffc738-dfcf-476b-8e4c-42e679db289b)
+
+3. 서버의 운영 체제를 선택하고 설치 지침을 따릅니다.
+
+> ⭐ Tips: <br>
+> 디바이스가 Microsoft Defender for Endpoint에 성공적으로 온보딩되는 즉시 Defender for Cloud에 연결됩니다. 이제 Defender for Cloud 및 Microsoft 365 Defender에서 보안 경고, 소프트웨어 인벤토리 및 취약점 평가 결과를 확인할 수 있습니다.
+
