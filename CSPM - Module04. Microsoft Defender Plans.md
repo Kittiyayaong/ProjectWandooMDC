@@ -10,6 +10,11 @@ Defender Plan은 MDC의 다양한 보안 기능을 활성화하여 클라우드 
     * Defender for Storage: 스토리지 계정에 대한 악성 코드 스캔 및 민감한 데이터 발견 기능을 포함합니다.
     * Defender for Key Vault: Key Vault 리소스에 대한 보안 평가 및 권장 사항을 제공합니다
 
+## 경고검증과 억제 
+두 기능은 Microsoft Defender Plans의 일부로, 클라우드 환경의 보안을 강화하고 보안 팀의 효율성을 높이는 데 중요한 역할을 합니다. 
+* 경고 검증: Microsoft Defender Plans에서 생성된 보안 경고의 유효성을 확인하여 실제 위협인지 판단합니다. 이를 통해 보안 팀은 경고를 분석하고 필요한 조치를 취할 수 있습니다 
+* 경고 억제: 반복적으로 발생하는 오탐이나 불필요한 경고를 자동으로 억제하여 보안 팀이 중요한 경고에 집중할 수 있도록 합니다. 경고 억제 규칙을 설정하면 특정 유형의 경고가 자동으로 억제됩니다.
+   
 ### Lab 1: 경고 검증(Alert validation)
 
 1.	Microsoft Defender for Cloud > General > Security Alerts으로 이동합니다. 
