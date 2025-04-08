@@ -43,6 +43,10 @@
  * Lab 2: Discovery 그룹생성 및 실행 주기 설정
  * Lab 2: Discovery 그룹생성 및 실행 주기 설정
 
+[**Module 8 - Contextual Security capabilities for AWS using Defender CSPM**](https://github.com/Kittiyayaong/ProjectWandooMDC/blob/main/CSPM%20-%20Module08.%20Contextual%20Security%20capabilities%20for%20AWS%20using%20Defender%20CSPM.md)
+  * Lab 1: AWS 계정 만들기
+  * Lab 2: Microsoft Defender for Cloud에서 새 AWS 계정을 위한 AWS 커넥터 만들기
+  * Lab 3: Defender CSPM 계획을 위한 AWS 환경 준비하기
 
 
 
@@ -78,8 +82,5 @@
   * Lab 2: Direct 온보딩을 통해 on-premises server를 연결
   * Lab 2-1: 지정된 구독에서 직접 온보딩을 활성화하기 전에 Defender for Servers가 아직 활성화되지 않은 경우
 
-[**Module 7 - Connecting an AWS  project**](https://github.com/Kittiyayaong/ProjectWandooMDC/edit/main/CWPP%20-%20Module06.%20Connecting%20an%20AWS%20%20project.md)
-  * Lab 1: AWS 계정 만들기
-  * Lab 2: Microsoft Defender for Cloud에서 새 AWS 계정을 위한 AWS 커넥터 만들기
 
 
