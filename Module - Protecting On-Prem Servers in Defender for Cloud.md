@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/dcef90fe-bf12-4fbf-8ab2-6772f1095d2a)# Module - Protecting On-Prem Servers in Defender for Cloud 
+# Module - Protecting On-Prem Servers in Defender for Cloud 
 
 ## 목표
 이 연습에서는 Hyper-V("온프레미스 서버" 역할)를 사용하여 개인 클라이언트 컴퓨터에 서버를 배포한 후, Microsoft Defender for Cloud를 사용하여 서버를 보호하기위해 Azure Arc를 배포하는 방법을 배우게 됩니다.
