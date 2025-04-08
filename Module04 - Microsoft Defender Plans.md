@@ -1,4 +1,4 @@
-# Module 04 - Workload Protections
+# Module 04 - Microsoft Defender Plans
 
 ### Lab 1: 경고 검증(Alert validation)
 
