@@ -1,9 +1,5 @@
 # Wandoo MDC HoL 사전 환경 설정 
 
-## 목표
-Azure 평가판 구독으로 새 Microsoft 계정 활성화
-이 섹션은 Azure 리소스를 자동으로 배포하여 빠르게 시작하거나 환경을 다시 프로비저닝해야 하는 경우를 대비하기 위한 것입니다.
-
 #### 전제 조건
 이 실험을 시작하기 전에 다음과 같은 전제 조건이 있는지 확인하세요:
 - **지원되는 웹 브라우저** (Microsoft Edge, Google Chrome, Safari, Firefox Mozilla)
