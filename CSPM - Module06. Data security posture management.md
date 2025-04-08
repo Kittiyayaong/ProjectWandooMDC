@@ -1,4 +1,4 @@
-# Module 23 - Data security posture management
+# Module 6 - Data security posture management
 
 ## 목표
 이 연습은 Microsoft Defender for Cloud에서 민감한 데이터 검색을 활성화하고 구성하는 방법을 안내하며, Defender CSPM 및 Defender for Storage 플랜에서 제공하는 추가 민감도 컨텍스트를 활용하는 다양한 방법을 보여줍니다.
