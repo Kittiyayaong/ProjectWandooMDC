@@ -13,12 +13,22 @@ Windows 10 Hyper-V 시스템. 이 가이드는 Windows 11에서도 작동합니�
 
 1. 윈도우 키를 눌러 'Hyper-v'를 검색하여, **Windows 기능 켜기/끄지**창으로 들어갑니다. 
 2. Hyper-V 박스를 눌러서 **Hyper-V Management Tools**와 **Hyper-V Platform** 두개를 활성화합니다.
-![Uploading image.png…]()
+  ![Windows Features](../Images/windowsfeatures.png?raw=true)
 
-![Windows Features](../Images/windowsfeatures.png?raw=true)
-4. You will need to re-start your PC to let the changes take effect.
-5. Search for **Hyper-V** in the Windows search bar and open it.
-6. Download an ISO image which will install an operating system, such as Windows Server 2022, by going [here](https://www.microsoft.com/en-us/evalcenter/download-windows-server-2022).
-Select the image most suitable to your PC environment and download it (Note: This process may take a few minutes). 
+3. 설정 이후에 PC가 재시작됩니다. 
+5. 윈도우에서 **Hyper-V**를 검색한 후 클릭합니다.  
+6. Windows Server 2022와 같은 운영 체제를 설치할 ISO 이미지를 다운로드합니다 [here](https://www.microsoft.com/en-us/evalcenter/download-windows-server-2022).
+7. PC 환경에 가장 적합한 이미지를 선택하고 다운로드하세요(참고: 이 과정은 몇 분 정도 걸릴 수 있습니다).
 
-Take note of where this ISO downloaded, as you'll need it later.
+> ⭐ Notes <br>
+> 본 모듈은 Windows Server 2022 64비트 버전 ISO를 기반으로 작성되었습니다.
+
+## Lab 2: Hyper-V를 사용하여 데스크톱에 이미 가상 스위치가 설치되어 있는지 확인합니다.
+1. Windows에서 **Hyper-v 관리자**를 클릭한 후, 오른쪽의 작업 창에서 "가상 스위치 관리자"를 선택하여 가상 스위치가 설치되어 있는지 확인해야 합니다.
+![image](https://github.com/user-attachments/assets/aaad747e-3cbd-4a36-8132-c616107991f1)
+
+2. 가상 스위치 아래에 가상 스위치가 설치되었음을 확인하는 "Default Switch"가 표시됩니다.
+![image](https://github.com/user-attachments/assets/d338eae1-8b11-45f5-a595-996a18d4ac2c)
+
+3. 기본 스위치(Default Switch)가 이미 설치되어 있지 않은 경우 [여기](https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/get-started/create-a-virtual-switch-for-hyper-v-virtual-machines?tabs=hyper-v-manager) 의 안내에 따라 설치하세요.
+
