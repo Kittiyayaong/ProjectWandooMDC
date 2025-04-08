@@ -1,4 +1,4 @@
-# Module 17 – Defender CSPM  
+# Module 5 – Defender CSPM  
 
 ## 목표
 이 연습에서는 Defender for CSPM를 활성화하고 CSPM 기능을 활용하는 방법을 배우게 됩니다.
