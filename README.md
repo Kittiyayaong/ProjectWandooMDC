@@ -10,33 +10,33 @@
 
 ### ✅ CSPM (Cloud Security Posture Management)
 
-[**Module 01 - Security Policy**](https://github.com/Kittiyayaong/ProjectWandooMDC/blob/main/CSPM%20-%20Module01.%20Security%20Policy.md)
-  * Lab 1: Microsoft Defender for cloud 정책 개요
-  * Lab 2: Azure Policy 살펴보기
-  * Lab 3: Recommendation에 대한 리소스 면제 만들기
-
-[**Module 02 - Regulatory Compliance**](https://github.com/Kittiyayaong/ProjectWandooMDC/blob/main/CSPM%20-%20Module02.%20Regulatory%20Compliance.md)
-  * Lab 1: Adding new standards in Azure and multicloud
-  * Lab 2: 벤치마크 보고서
-  * Lab 3: Custom Standard 생성하기
-  * Lab 4: Azure 감사 보고서
-  * Lab 6: 시간에 따른 규정 준수 통합 문서
-
-[**Module 3 - Secure Posture**](https://github.com/Kittiyayaong/ProjectWandooMDC/blob/main/CSPM%20-%20Module03.%20Secure%20Posture.md)
-  * Lab 1: 컨테이너의 취약성 평가
-
-[**Module 04 - Microsoft Defender Plans**](https://github.com/Kittiyayaong/ProjectWandooMDC/blob/main/CSPM%20-%20Module04.%20Microsoft%20Defender%20Plans.md)
-  * Lab 1: 경고 검증(Alert validation)
-  * Lab 2: 경고 억제(Alert suppression)
-
-[**Module 5 – Defender CSPM**](https://github.com/Kittiyayaong/ProjectWandooMDC/blob/main/CSPM%20-%20Module05.%20Defender%20CSPM.md)
-  * Lab 1: Defender CSPM 계획 활성화
-  * Lab 2: 공격 경로 분석 및 완화 확인하기
-  * Lab 3: Cloud Security Explorer를 위한 Build Query
-
-[**Module 6 - Data security posture management**](https://github.com/Kittiyayaong/ProjectWandooMDC/blob/main/CSPM%20-%20Module06.%20Data%20security%20posture%20management.md)
-  * Lab 1: 민감한 데이터 검색 활성화
-  * Lab 2: Configure sensitive data categories
+ [**Module 01 - Security Policy**](https://github.com/Kittiyayaong/ProjectWandooMDC/blob/main/CSPM%20-%20Module01.%20Security%20Policy.md)
+   * Lab 1: Microsoft Defender for cloud 정책 개요
+   * Lab 2: Azure Policy 살펴보기
+   * Lab 3: Recommendation에 대한 리소스 면제 만들기
+ 
+ [**Module 02 - Regulatory Compliance**](https://github.com/Kittiyayaong/ProjectWandooMDC/blob/main/CSPM%20-%20Module02.%20Regulatory%20Compliance.md)
+   * Lab 1: Adding new standards in Azure and multicloud
+   * Lab 2: 벤치마크 보고서
+   * Lab 3: Custom Standard 생성하기
+   * Lab 4: Azure 감사 보고서
+   * Lab 6: 시간에 따른 규정 준수 통합 문서
+ 
+ [**Module 3 - Secure Posture**](https://github.com/Kittiyayaong/ProjectWandooMDC/blob/main/CSPM%20-%20Module03.%20Secure%20Posture.md)
+   * Lab 1: 컨테이너의 취약성 평가
+ 
+ [**Module 04 - Microsoft Defender Plans**](https://github.com/Kittiyayaong/ProjectWandooMDC/blob/main/CSPM%20-%20Module04.%20Microsoft%20Defender%20Plans.md)
+   * Lab 1: 경고 검증(Alert validation)
+   * Lab 2: 경고 억제(Alert suppression)
+ 
+ [**Module 5 – Defender CSPM**](https://github.com/Kittiyayaong/ProjectWandooMDC/blob/main/CSPM%20-%20Module05.%20Defender%20CSPM.md)
+   * Lab 1: Defender CSPM 계획 활성화
+   * Lab 2: 공격 경로 분석 및 완화 확인하기
+   * Lab 3: Cloud Security Explorer를 위한 Build Query
+ 
+ [**Module 6 - Data security posture management**](https://github.com/Kittiyayaong/ProjectWandooMDC/blob/main/CSPM%20-%20Module06.%20Data%20security%20posture%20management.md)
+   * Lab 1: 민감한 데이터 검색 활성화
+   * Lab 2: Configure sensitive data categories
 
 ### ✅ CWPP (Cloud Workload Protection Platform)
 
