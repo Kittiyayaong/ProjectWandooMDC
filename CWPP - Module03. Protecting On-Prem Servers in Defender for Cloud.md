@@ -1,7 +1,7 @@
 # Module 3 - Protecting On-Prem Servers in Defender for Cloud 
 
-## 목표
-이 연습에서는 Hyper-V("온프레미스 서버" 역할)를 사용하여 개인 클라이언트 컴퓨터에 서버를 배포한 후, Microsoft Defender for Cloud를 사용하여 서버를 보호하기위해 Azure Arc를 배포하는 방법을 배우게 됩니다.
+## MDC Hybrid 환경 지원
+Microsoft Defender for Cloud (MDC)의 Cloud Workload Protection Platform (CWPP)는 클라우드뿐만 아니라 온프레미스 서버도 보호합니다. 이는 하이브리드 환경에서의 보안 요구를 충족시키기 위해 설계된 기능입니다.
 
 ## 전제 조건
 On-premises 컴퓨터의 서버 보호를 위해 Defender for Servers(플랜 1 또는 플랜 2)를 활성화해야 합니다.
