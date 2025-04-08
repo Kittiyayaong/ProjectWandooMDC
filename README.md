@@ -61,14 +61,14 @@
   * Lab 1: AI 워크로드 활성화
 
 [**Module 5 - Module 05 - Defender for APIs**](https://github.com/Kittiyayaong/ProjectWandooMDC/edit/main/CWPP%20-%20Module06.%20Defender%20for%20APIs.md)
-  * Lab 1. AZURE API 관리 서비스 만들기
-  * Lab 2. API 관리 내에서 API 게시하기
+  * Lab 1: AZURE API 관리 서비스 만들기
+  * Lab 2: API 관리 내에서 API 게시하기
   * Lab 3: DEFENDER FOR API 활성화
 
 [**Module 6 – Integration with Microsoft Defender for Endpoint**](https://github.com/Kittiyayaong/ProjectWandooMDC/edit/main/CWPP%20-%20Module05.%20Integration%20with%20Microsoft%20Defender%20for%20Endpoint.md)
   * Lab 1: Microsoft Defender for Endpoint의 자동 배포 및 통합 활성화
   * Lab 2: Direct 온보딩을 통해 on-premises server를 연결
-  * Lab 2-1. 지정된 구독에서 직접 온보딩을 활성화하기 전에 Defender for Servers가 아직 활성화되지 않은 경우
+  * Lab 2-1: 지정된 구독에서 직접 온보딩을 활성화하기 전에 Defender for Servers가 아직 활성화되지 않은 경우
 
 [**Module 7 - Connecting an AWS  project**](https://github.com/Kittiyayaong/ProjectWandooMDC/edit/main/CWPP%20-%20Module06.%20Connecting%20an%20AWS%20%20project.md)
   * Lab 1: AWS 계정 만들기
