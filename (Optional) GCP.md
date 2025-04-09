@@ -13,73 +13,46 @@
 5. [Google Cloud Console](console.cloud.google.com)에 로그인 후 대시보드를 확인가능합니다.
   ![image](https://github.com/user-attachments/assets/e579c4a1-b800-4675-83ed-fe9adb8f816e)
 
-6. Copy the project number and project ID, and keep them safe, as you'll be using them in the next exercise.
+6. 프로젝트 번호와 프로젝트 ID를 복사하여 기록해둡니다.
 
-### Exercise 2: Create the GCP connector in Microsoft Defender for Cloud
+### Lab 2: Create the GCP connector in Microsoft Defender for Cloud
+Microsoft Defender for Cloud에서 GCP 리소스를 보호하려면 다음 연습에서 수행할 Microsoft Defender for Cloud에서 GCP 커넥터를 만들어야 합니다.
 
-In order to be able to protect your GCP resources in Microsoft Defender for Cloud, you need to create the GCP connector in Microsoft Defender for Cloud, which you will do in the following exercise. 
-
-
-1. Go to the Azure Portal and open **Microsft Defender for Cloud** 
-2. Go to **Environment Settings** in the left-hand tab.
-3. Click **+ Add environment** and select **Google Cloud Platform** from the dropdown menu.
-
+1. MDC > Environment Settings > + Add environment** > Google Cloud Platform
   ![image](https://github.com/user-attachments/assets/906b2d1a-c2ff-45db-9e3e-bb8b9bc0a7aa)
 
-4. In the **Create GCP connector** page, then fill in all the details:
-
-**Connector Name**: select a new name
-
-**Onboard**: Single project 
-
-**Subscription**: Choose your existing subscription
-
-**Resource Group**: Create a new resource group and name it GCP.
-
-**Location**: Select the location nearest you.
-
-**Scan interval**: You can leave as is.
-
-**GCP project number**: Paste this from exercise 1, or alternatively go to [Google Cloud Console](console.cloud.google.com) and copy the project number from the dashboard.
-
-**GCP project id**: Paste this from exercise 1, or alternatively go to [Google Cloud Console](console.cloud.google.com) and copy the project ID from the dashboard.
+4.  **Create GCP connector**페이지에서 detail한 정보를 기입합니다. 
+하기 기재된 정보 외에는 default값을 유지합니다. 
+* **Onboard**: Single project
+* **Location**: Select the location nearest you.
+* **GCP project number**: Lab 1-6 내용을 붙여넣거나 [Google Cloud Console](console.cloud.google.com) 으로 이동하여 대시보드에서 프로젝트 번호를 복사합니다.
+* **GCP project id**: Lab 1-6 내용을 붙여넣거나 [Google Cloud Console](console.cloud.google.com) 으로 이동하여 대시보드에서 프로젝트 번호를 복사합니다.d.
 
   ![image](https://github.com/user-attachments/assets/bf19f11b-e6e1-4932-8607-24863ff63282)
 
 
-5.  After filling everything in, click **Next: Select plans**.
-6. In **Select plans**, the Foundational CSPM plan is enabled by default.
-
-7. Ensure that the Defender CSPM, Servers, Containers and Database plans are set to **On**. 
-
+5. **Next: Select plans** 에서 Defender CSPM, 서버, 컨테이너 및 데이터베이스 계획이 **On**으로 설정되어 있는지 확인합니다.
   ![image](https://github.com/user-attachments/assets/dbceb075-a293-4704-9ead-65e0c01a2b77)
 
-8. Select **Next: Configure access**.
-9. Copy the GCP Cloud Shell script. 
+6. **Next: Configure access**에서 GCP 클라우드 셸 스크립트를 복사합니다.
   ![image](https://github.com/user-attachments/assets/dbe129b4-c594-437f-b83b-edeb38638f02)
 
-10. Click **GCP Cloud Shell** button which will open up the GCP console with Cloud Shell.
-11. Paste the script into the Cloud Shell.
+7. **GCP 클라우드 쉘** 버튼을 클릭하면 클라우드 쉘이 있는 GCP 콘솔이 열립니다.
+8. 스크립트를 클라우드 셸에 붙여넣습니다.
   ![image](https://github.com/user-attachments/assets/34dcc055-9a0a-4795-8800-01e7e1fc1ff6)
 
-12. Let the script run and after it finishes successfully return to Defender for Cloud. 
-13. Back in the **Configure access** page click **Next: review and Generate**.
-14. In the next screen, after validation completes succesfully, click **Create**
+8. 스크립트를 실행한 후 성공적으로 완료되면 Defender for Cloud로 돌아갑니다. 
+9. review and generate 후 **Create**로 완료합니다. 
 
-Now, you have successfully created a GCP connector in Microsoft Defender for Cloud. Now you'll be able to get GCP recommendations and alerts.
+이제 Microsoft Defender for Cloud에서 GCP 커넥터를 성공적으로 만들었습니다. 이제 GCP 권장 사항과 알림을 받을 수 있습니다.
 
-### Exercise 3: Investigate the GCP recommendations 
-
-Once a vulnerable image has been pushed to the Azure Container Registry registry, then Microsoft Defender for Containers will start scanning the image for vulnerabilities. You will now look into the recommendations in Microsoft Defender for Cloud for this. 
+### Lab 3: Investigate the GCP recommendations 
+취약한 이미지가 Azure 컨테이너 레지스트리로 푸시되면 Microsoft Defender for Containers가 이미지에 취약성이 있는지 스캔하기 시작합니다. 이제 Microsoft Defender for Cloud의 권장 사항을 살펴보겠습니다.
 
 > [!NOTE]
-> You will need to create some GCP resources in order to see recommendations for GCP in Microsoft Defender for Cloud.
+> Microsoft Defender for Cloud에서 GCP에 대한 권장 사항을 보려면 GCP 리소스를 생성해야 합니다.
  
- 1. Go to **Microsoft Defender for Cloud** in the **Azure Portal**.
- 2. Go to the **Recommendations** tab in Defender for Cloud.
- 3. In the upper taskbar, under **Scope**, select **GCP** only. 
- 
+ 1.MDC > Recommendation > Scope > GCP만 선택합니다. 
   ![image](https://github.com/user-attachments/assets/c8aa6ad8-e5db-4155-9459-659f5ce952ba)
 
-
-If you have existing GCP resources, then you'll be able to see recommendations associated with them.
+기존 GCP 리소스가 있는 경우 해당 리소스와 관련된 권장 사항을 확인할 수 있습니다.
