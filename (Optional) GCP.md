@@ -1,16 +1,16 @@
-# Module 10 - Connecting a GCP project
+# Module 9 - Connecting a GCP project
 
-### Exercise 1: Create a GCP project
+### Lab 1: Create a GCP project
 
-First you need to create a GCP project. 
+먼저 GCP 프로젝트를 만들어야 합니다.
 
-1.	Navigate to [Create free GCP](https://www.google.com/aclk?sa=l&ai=DChcSEwiA7K7Gubn3AhUJuu0KHbACBZkYABAAGgJkZw&sig=AOD64_0Cc0zndLvPEu7wV4blEFwWvjOWag&q&adurl&ved=2ahUKEwihk6nGubn3AhVFZcAKHWP5BYkQ0Qx6BAgDEAE).  
+1.	[Create free GCP](https://www.google.com/aclk?sa=l&ai=DChcSEwiA7K7Gubn3AhUJuu0KHbACBZkYABAAGgJkZw&sig=AOD64_0Cc0zndLvPEu7wV4blEFwWvjOWag&q&adurl&ved=2ahUKEwihk6nGubn3AhVFZcAKHWP5BYkQ0Qx6BAgDEAE)로 이동합니다.
   ![image](https://github.com/user-attachments/assets/74fe6bb0-4d75-4137-93a2-c8767d9248d2)
 
-2.  Click **Get started for free**.
-3.  Now select either an existing Google account or create a new one. 
-4.  Follow the on-screen instructions to create the GCP project.
-5.  At the end, you should be able to sign in to the [Google Cloud Console](console.cloud.google.com), and see the Dashboard:
+2. **무료로 시작하기**를 클릭합니다.
+3. 이제 기존 Google 계정을 선택하거나 새 계정을 만드세요.
+4. 화면의 지시에 따라 GCP 프로젝트를 만듭니다.
+5. [Google Cloud Console](console.cloud.google.com)에 로그인 후 대시보드를 확인가능합니다.
   ![image](https://github.com/user-attachments/assets/e579c4a1-b800-4675-83ed-fe9adb8f816e)
 
 6. Copy the project number and project ID, and keep them safe, as you'll be using them in the next exercise.
