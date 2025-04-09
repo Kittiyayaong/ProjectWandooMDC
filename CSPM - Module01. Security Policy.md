@@ -12,7 +12,7 @@ Microsoft Defender for Cloud를 시작하려면 Microsoft Azure를 구독해야 
 1. Portal.azure.com에 접속하여 microsoft defender for cloud를 검색하여 클릭합니다.
 2. Microsoft Defender for cloud의 왼쪽 탐색 화면에서 **Management > Environment Settings**을 클릭합니다. 
 3. 그런 다음 하단 Tenant 목록에서 **Subscription**을 선택하고 왼쪽 탐색에서 **Security Policies**을 선택합니다.
-4. **Standards** 탭에서 MCSB 및 241 권장 사항을 확인할 수 있습니다. **Type**은 **Default**입니다. 
+4. **Standards** 탭에서 MCSB 및 권장 사항을 확인할 수 있습니다. **Type**은 **Default**입니다. 
 
 참고: MCSB는 Microsoft Defender for Cloud에 온보딩할 때 자동으로 할당됩니다(Default). 기본 할당에는 감사 정책만 포함되어 있습니다. 자세한 내용은 [Security policies in Defender for Cloud]([https://aka.ms/ascpolicies](https://learn.microsoft.com/en-us/azure/defender-for-cloud/security-policy-concept))을 참조하세요. MCSB는 Azure뿐만 아니라 멀티 클라우드 환경의 보안 권장 사항 및 모범 사례의 기준이 됩니다. 
 
