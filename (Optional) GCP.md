@@ -44,8 +44,6 @@ Microsoft Defender for Cloud에서 GCP 리소스를 보호하려면 다음 연�
 8. 스크립트를 실행한 후 성공적으로 완료되면 Defender for Cloud로 돌아갑니다. 
 9. review and generate 후 **Create**로 완료합니다. 
 
-이제 Microsoft Defender for Cloud에서 GCP 커넥터를 성공적으로 만들었습니다. 이제 GCP 권장 사항과 알림을 받을 수 있습니다.
-
 ### Lab 3: Investigate the GCP recommendations 
 취약한 이미지가 Azure 컨테이너 레지스트리로 푸시되면 Microsoft Defender for Containers가 이미지에 취약성이 있는지 스캔하기 시작합니다. 이제 Microsoft Defender for Cloud의 권장 사항을 살펴보겠습니다.
 
