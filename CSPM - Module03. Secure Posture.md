@@ -73,6 +73,7 @@ az acr build --image sample/hello-world:v1 --registry <your container registry n
 ![image](https://github.com/user-attachments/assets/69540ca7-700f-4106-a28c-e0122dee9310)
 
 
+### 🔗 [다음 Lab으로 이동하기 »](https://github.com/Kittiyayaong/ProjectWandooMDC/blob/main/CSPM%20-%20Module04.%20Microsoft%20Defender%20Plans.md)
 
 
 
