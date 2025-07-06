@@ -1,5 +1,11 @@
 # Module 04 - Microsoft Defender Plans
 
+---
+
+이번 wandoo-KT에서는 Lab 1번만 진행합니다. 
+
+---
+
 ## Defender Plan이란? 
 Defender Plan은 MDC의 다양한 보안 기능을 활성화하여 클라우드 환경의 보안 태세를 강화하는 계획입니다. 각 Defender Plan은 특정 유형의 리소스에 대한 보안 기능을 제공하며, 이를 통해 클라우드 리소스를 보호하고 관리할 수 있습니다. 예를 들어, Defender for Servers는 Windows 및 Linux 서버에 대한 예방적 보호, 침해 후 탐지, 자동화된 조사 및 대응 기능을 제공합니다
 
@@ -26,7 +32,7 @@ Defender Plan은 MDC의 다양한 보안 기능을 활성화하여 클라우드 
     - 우측 상단에 **Sample alerts** 클릭합니다. 
     - 테스트 할 Subscription과 Defender for cloud plan에서 **Container**을 선택합니다.
     
-    ![image](https://github.com/user-attachments/assets/bc36ca91-0687-459a-879a-5d6aa13f15ef)
+    <img width="1552" alt="image" src="https://github.com/user-attachments/assets/bcedfe5f-a0ab-446b-a898-b66f6cb2b262" />
 
 3. 샘플 알림 생성이 진행 중이며 프로세스가 완료될 때까지 기다립니다. 알림 센터를 열거나 활동 로그에서 진행 상황을 추적할 수 있습니다(이 프로세스는 보통 완료하는 데 2분이 걸립니다)
 4. 이제 알림 페이지에서 샘플 이벤트를 볼 수 있습니다. 
