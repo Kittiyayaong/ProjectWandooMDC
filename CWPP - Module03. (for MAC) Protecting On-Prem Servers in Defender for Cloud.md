@@ -106,3 +106,4 @@ ping www.google.com
 5. VM 내 PowerShell 관리자 권한으로 접속 후 스크립트 실행
 6. https://microsoft.com/devicelogin에서 코드 입력 ➔ 인증 완료
 
+### 🔗 [다음 Lab으로 이동하기 Windows »](https://github.com/Kittiyayaong/ProjectWandooMDC/blob/main/CWPP%20-%20Module04.%20AI%20Workloads.md)
