@@ -19,9 +19,9 @@ Microsoft Defender for Cloud (MDC)의 Cloud Workload Protection Platform (CWPP)�
 
 ---
 
-# 📝 Lab 1: macOS에 Hypervisor 설치하기
+## Lab 1: macOS에 Hypervisor 설치하기
 
-## ✅ 1. UTM 설치 (예시, 무료)
+### ✅ 1. UTM 설치 (예시, 무료)
 
 🔗 [UTM 공식 다운로드](https://mac.getutm.app)
 
@@ -30,7 +30,7 @@ Microsoft Defender for Cloud (MDC)의 Cloud Workload Protection Platform (CWPP)�
 
 ---
 
-# 📝 Lab 2: Windows Server VM 생성
+## Lab 2: Windows Server VM 생성
 
 1. **Virtualize ➔ Windows** 선택
 2. Windows Server ISO 파일 선택 (예: Windows Server 2022)
@@ -44,7 +44,7 @@ Microsoft Defender for Cloud (MDC)의 Cloud Workload Protection Platform (CWPP)�
 
 ---
 
-# 📝 Lab 3: Azure Arc RP (Resource Provider) 등록
+## Lab 3: Azure Arc RP (Resource Provider) 등록
 
 1. Azure Portal ➔ **Cloud Shell (Bash)** 실행
 2. 아래 명령어를 순서대로 실행
@@ -54,3 +54,55 @@ az login
 az provider register --namespace Microsoft.HybridCompute
 az provider register --namespace Microsoft.GuestConfiguration
 az provider register --namespace Microsoft.HybridConnectivity
+```
+결과값에 나온 코드를 [https://microsoft.com/devicelogin](https://microsoft.com/devicelogin)에 등록하여 인증 
+
+> ⭐ Tips.
+>
+> 이 3개의 Provider는 **Azure Arc를 통해 온프레미스 서버를 Azure에 연결(등록)하기 위한 전제 조건**임.
+>
+| 명령어 | 목적 |
+|--|--|
+| `az provider register --namespace Microsoft.HybridCompute` | Azure Arc를 통해 온프레미스 VM, 서버를 **Azure Resource Manager 리소스로 등록**할 수 있도록 Hybrid Compute 리소스 프로바이더를 활성화 |
+| `az provider register --namespace Microsoft.GuestConfiguration` | Guest Configuration 정책(예: Arc로 연결된 서버의 OS 보안 설정 및 규정 준수 관리)을 적용하기 위한 프로바이더 |
+| `az provider register --namespace Microsoft.HybridConnectivity` | 온프레미스 서버와 Azure 간 **하이브리드 연결 기능**(예: Arc Agent 연결, Private Link 등)을 지원 |
+
+---
+
+## Lab 4: Windows Server VM 초기 세팅 (macOS + UTM)
+
+Windows Server 설치가 완료되면, VM을 Azure Arc에 연결하기 전에 기본 세팅을 진행해야 합니다.
+
+### ✅ 1. 관리자 비밀번호 설정
+
+1. 설치가 완료되면 첫 로그인 시 **Administrator** 계정 비밀번호 설정 화면이 나타납니다.
+2. 복잡성 규칙을 만족하는 비밀번호를 입력합니다.
+
+### ✅ 2. 네트워크 연결 확인
+
+VM이 Azure Arc에 연결되려면 인터넷 접속이 필요합니다.
+
+1. Windows Server VM에 로그인합니다.
+2. **Start ➔ Windows PowerShell**을 열어 아래 명령어로 인터넷 연결을 확인합니다.
+
+```powershell
+ping www.google.com
+```
+
+---
+
+## Lab 5: Azure Arc Agent 설치 (Onboarding)
+1. Azure Portal ➔ Azure Arc ➔ add resource > add machine > 
+
+   <img width="1440" alt="스크린샷 2025-07-06 오후 2 36 12" src="https://github.com/user-attachments/assets/8091dc81-dffd-451e-a86b-7b27c9a5a8e2" />
+
+3. Add a single server ➔ Generate script: Subscription, Resource Group, Region, OS 등 정보 입력 후 스크립트 생성
+
+   <img width="1192" alt="image" src="https://github.com/user-attachments/assets/437b632c-e710-4912-a182-bd76118cbc73" />
+
+   <img width="1434" alt="image" src="https://github.com/user-attachments/assets/e06c2120-5b82-4d70-98b0-9fafca3db6fc" />
+
+
+5. VM 내 PowerShell 관리자 권한으로 접속 후 스크립트 실행
+6. https://microsoft.com/devicelogin에서 코드 입력 ➔ 인증 완료
+
