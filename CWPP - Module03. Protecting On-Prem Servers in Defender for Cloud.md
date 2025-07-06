@@ -6,7 +6,9 @@ Microsoft Defender for Cloud (MDC)의 Cloud Workload Protection Platform (CWPP)�
 ## 전제 조건
 On-premises 컴퓨터의 서버 보호를 위해 Defender for Servers(플랜 1 또는 플랜 2)를 활성화해야 합니다.
 
-## Lab 1: 디바이스에 서버를 만드는 데 사용할 Hyper-V 설치하기
+--- 
+
+## Lab 1:(Windows) 디바이스에 서버를 만드는 데 사용할 Hyper-V 설치하기 
 
 * 전제 조건: Windows 10/11
 Windows 10 Hyper-V 시스템. 이 가이드는 Windows 11에서도 작동합니다. 자세한 내용은 [여기](https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/reference/hyper-v-requirements)) 를 참조하세요
