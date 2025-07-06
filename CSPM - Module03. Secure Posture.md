@@ -8,6 +8,17 @@
 - Microsoft Cloud Security Benchmark(MCSB) 등 표준 기반 평가  
 - 조직은 이를 통해 **Remediation(시정 조치) 우선순위**를 결정
 
+## ✅ Lab 핵심요소 
+| **항목**       | **내용**                                                                                                                                  |
+| ------------ | --------------------------------------------------------------------------------------------------------------------------------------- |
+| **랩 목적**     | **컨테이너 이미지의 취약점 평가**                                                                                                                    |
+| **무엇을 배우나?** | Microsoft Defender for Cloud가 \*\*Azure Container Registry (ACR)\*\*에 저장된 컨테이너 이미지를 자동으로 스캔하여 **취약점을 탐지**하고, 보안 상태를 관리하는 방법             |
+| **핵심 절차**    | 1. ACR (Container Registry) 생성<br>2. 테스트용 Linux 컨테이너 이미지(`hello-world`) 빌드 및 ACR에 푸시<br>3. Defender for Cloud가 자동 스캔하여 **취약점 결과 표시** 확인 |
+| **기술 포인트**   | - **Qualys 엔진**을 사용하여 이미지 취약점 분석<br>- Defender for Cloud가 이미지 푸시 후 자동 스캔<br>- 실습 완료 후 \*\*Recommendation(권장 사항)\*\*에 취약점 결과 표시          |
+| **실무 적용 가치** | - DevOps 파이프라인에 ACR 취약점 평가를 통합 가능<br>- 이미지 배포 전 **보안 검증**으로 공급망 리스크 최소화<br>- 관리자는 Defender for Cloud Dashboard에서 전체 취약점 현황을 시각화 가능      |
+| **결론 문장**    | **“ACR에 푸시된 이미지가 Defender for Cloud를 통해 자동 스캔되고, 취약점 결과가 관리 콘솔에 표시되어 보안 태세를 강화할 수 있음을 이해하는 실습”**                                        |
+
+
 ---
 
 ### Lab 1: 컨테이너의 취약성 평가
@@ -54,12 +65,13 @@ az acr build --image sample/hello-world:v1 --registry <your container registry n
 
 ![image](https://github.com/user-attachments/assets/846beec8-1625-4a55-8e8c-5cf0092ff886)
 
-5. 성공 메시지가 나타날 때까지 기다립니다. 
+5. 성공 메시지가 나타날 때까지 기다립니다.
+   
 ![image](https://github.com/user-attachments/assets/77cdb543-527a-42e4-89fe-80c86f2f03ce)
 
-6. Recommendatino에서 항목이 나타나기 위해, 스캔은 일반적으로 몇 분 이내에 완료되지만, 취약점/보안 결과가 권장 사항에 나타나려면 최대 15분이 걸릴 수 있습니다.
+7. Recommendatino에서 항목이 나타나기 위해, 스캔은 일반적으로 몇 분 이내에 완료되지만, 취약점/보안 결과가 권장 사항에 나타나려면 최대 15분이 걸릴 수 있습니다.
 ![image](https://github.com/user-attachments/assets/69540ca7-700f-4106-a28c-e0122dee9310)
-![image](https://github.com/user-attachments/assets/343f16b6-0b24-428d-b61c-177aac511044)
+
 
 
 
