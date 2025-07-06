@@ -1,11 +1,26 @@
 # Module 9 - Azure Policy Lab
 
-## 🎯 **목표**
-Azure Policy를 활용해 조직의 클라우드 리소스 규정 준수(Posture)를 관리하고, Built-in 및 Custom Policy를 할당/평가/Remediation하는 방법을 익힌다.
+# 🎯 **목표**
+Azure Policy를 활용해 조직의 클라우드 리소스 거버넌스를 강화한다.  
+특히,
+* ✔**Allowed Locations 정책** ➔ **배포 지역 규정 준수(Data Residency Compliance)**
+* **Owner 태그 정책** ➔ **비용 책임 관리(Chargeback), 운영 거버넌스**
+
+을 동시에 구현한다.
 
 ## ✅ **전제 조건**
 - Azure Subscription Owner/Contributor 권한
-- Azure Policy 리소스 Provider 등록 완료 상태 (기본적으로 활성화됨)
+- Azure Policy Resource Provider 등록 완료
+
+## 📌 **시나리오 배경**
+
+### 🎯 **조직 요구사항**
+
+> ✅ **보안 & 컴플라이언스 팀 요구**
+> - 모든 리소스는 **Korea Central 지역**에만 배포해야 한다. (데이터 주권 준수)
+
+> ✅ **IT 운영 & 재무팀 요구**
+> - **Owner 태그가 없는 리소스는 비용 책임자가 불명확**하여 Chargeback(비용 배분 청구) 불가 ➔ **Owner 태그 필수화** 필요.
 
 ---
 
@@ -34,33 +49,33 @@ Azure Policy를 활용해 조직의 클라우드 리소스 규정 준수(Posture
 ---
 
 ## **Lab 2. 정책 평가 및 Remediation**
+Azure Policy를 할당한 뒤, 실제 리소스들이 정책을 준수하고 있는지(Compliant), 아니면 위반 중인지(Non-compliant) 를 평가/확인하는 단계입니다.
 
 1. Compliance 확인
    1. Policy 메뉴 ➔ **Compliance**
    2. 방금 할당한 **Allowed locations 정책** 확인
    3. Non-compliant 리소스가 있으면 표시됨
 
-2. Remediation Task 생성
-   1. Non-compliant 항목 클릭
-   2. 상단 ➔ **Create remediation task**
-   3. Remediation 실행 ➔ 정책에 따라 지원되지 않는 경우도 있음 (위 정책은 location 변경 불가)
+    <img width="1434" alt="image" src="https://github.com/user-attachments/assets/1409e364-1c86-477c-8d4d-3aa65041a8ee" />
 
 ---
 
-## **Lab 3. Custom Policy 정의 ➔ Assignment ➔ Remediation**
+## **Lab 3. Owner Tag Custom Policy 정의 ➔ Assignment ➔ Remediation**
 
-1. Custom Policy 정의
-   1. **Definitions ➔ + Policy definition** 클릭
-   2. 아래 예시 정보 입력:
+### **1. Custom Policy 정의**
+
+1. Policy ➔ **Definitions ➔ + Policy definition**
+2. 아래 정보 입력:
 
 | 항목 | 값 |
 |--|--|
-| **Definition location** | Subscription 선택 |
+| **Definition location** | Subscription |
 | **Name** | Enforce tag: Owner |
 | **Description** | 모든 리소스에 Owner 태그 필수 |
 | **Category** | Tags |
 
-2. Policy Rule 작성
+
+### **2. Policy Rule 작성**
 
 ```json
 {
@@ -85,6 +100,5 @@ Azure Policy를 활용해 조직의 클라우드 리소스 규정 준수(Posture
   }
 }
 ```
-
 
 ### 🔗 [다음 Lab으로 이동하기 »](https://github.com/Kittiyayaong/ProjectWandooMDC/blob/main/CWPP%20-%20Module01.%20Agentless%20container%20vulnerability%20assessment%20scanning.md)
