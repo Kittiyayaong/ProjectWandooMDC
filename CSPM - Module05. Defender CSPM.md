@@ -3,6 +3,12 @@
 ## 목표
 이 연습에서는 Defender for CSPM를 활성화하고 CSPM 기능을 활용하는 방법을 배우게 됩니다.
 
+---
+
+Wandoo-kt에서는 Lab 2번만 진행합니다.
+
+---
+
 ## CSPM이란? 
 CSPM(Cloud Security Posture Management)은 클라우드 환경에서 보안 태세를 관리하는 솔루션입니다. CSPM은 클라우드 인프라의 보안 상태를 지속적으로 모니터링하고, 잘못된 구성이나 보안 위험을 식별하여 이를 해결하는 데 도움을 줍니다. Microsoft Defender for Cloud는 CSPM 기능을 제공하여 Azure, AWS, GCP와 같은 멀티 클라우드 환경에서 보안 태세를 관리할 수 있습니다
 
