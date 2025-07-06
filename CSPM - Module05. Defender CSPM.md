@@ -80,3 +80,5 @@ Defender CSPM에서 제공하는 기능에 액세스하려면 구독에서 <a hr
 
    ![image](https://github.com/user-attachments/assets/3558ad07-a951-4967-b0d4-f255aca58389)
 
+
+### 🔗 [다음 Lab으로 이동하기 »](https://github.com/Kittiyayaong/ProjectWandooMDC/blob/main/CSPM%20-%20Module06.%20Data%20security%20posture%20management.md)
