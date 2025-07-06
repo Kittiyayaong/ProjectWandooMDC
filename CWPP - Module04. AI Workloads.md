@@ -29,7 +29,7 @@ Azure OpenAI 서비스를 프로비저닝하고 gpt-35-turbo 모델을 배포한
 
 ---
 
-## Lab 2. Azure OpenAI 서비스를 프로비저닝하고 gpt-35-turbo 모델을 배포
+## Lab 2. Azure OpenAI 서비스 환경 준비
 
 **Step 1. Azure OpenAI Resource 생성**
 
@@ -46,21 +46,23 @@ Azure OpenAI 서비스를 프로비저닝하고 gpt-35-turbo 모델을 배포한
 
 4. **Review + Create** ➔ **Create**
 
-## **Step 2. Deployment (모델 배포)**
+**Step 2. Deployment (모델 배포)**
 
-1. **Resource 생성 완료 후 ➔ Overview 탭**
-2. 왼쪽 메뉴 ➔ **Deployments**
-3. ➔ + Create
+<img width="1440" alt="image" src="https://github.com/user-attachments/assets/880b00dc-92b1-4107-8a5e-cdbf642fbf14" />
 
-✅ **필수 입력값**
-- Model: `gpt-35-turbo` (또는 lab 가이드 지정 모델)
-- Deployment name: (예: gpt35turbo)
+1. azure portal 에서 **Open AI** 클릭하여 접속 후 **Ai foundry portal**로 이동
 
-4. ➔ **Create**
+   <img width="1170" alt="image" src="https://github.com/user-attachments/assets/1b73cb78-2d97-4b39-b7cd-c96c88594e32" />
 
----
+2. 왼쪽 메뉴 ➔ **Deployments** ➔ + Create
+   - Model: `gpt-35-turbo` (또는 lab 가이드 지정 모델)
+   - Deployment name: (예: gpt35turbo)
 
-## 📝 **Step 3. Access 확인**
+   <img width="629" alt="image" src="https://github.com/user-attachments/assets/6626281f-f828-4dcd-8776-1fb19b045aee" />
+
+4.  Create 하여 완료
+
+** Step 3. Access 확인**
 
 1. 왼쪽 메뉴 ➔ **Keys and Endpoint**
 2. ➔ Endpoint URL 및 Key 복사  
