@@ -1,5 +1,3 @@
-# ☁️ Azure Security 서비스 – CSPM 여부 구분
-
 # ☁️ Azure Security 서비스 – CSPM & CWPP 여부 구분
 
 | **카테고리** | **서비스/기능** | **CSPM** | **CWPP** | **설명** |
@@ -54,23 +52,4 @@
 ❌ **해당 없음**
 - IAM, 대부분 Network Security, Data encryption, SIEM/SOAR 단독 서비스
 
----
 
-필요 시 **CNAPP 통합 표 (CSPM + CWPP + CIEM)** 도 이어서 제작해드리겠습니다.
-
----
-
-## ✅ **요약**
-
-✔️ **CSPM 범주**
-- **Azure Policy**
-- **Blueprints (Template Spec)**
-- **Management Groups**
-- **Defender for DevOps (코드 & 파이프라인 posture)**
-
-❌ **CSPM이 아닌 항목**
-- IAM, Network Security, Threat Protection, Data Security 서비스는 CSPM이 아닌 **별도 보안 컨트롤**.
-
----
-
-필요하면 각 CSPM 기능별 **실습 Lab 설계**도 이어서 만들어드리겠습니다.
