@@ -87,5 +87,4 @@ Azure Policy를 활용해 조직의 클라우드 리소스 규정 준수(Posture
 ```
 
 
-### 🔗 [다음 Lab으로 이동하기 »](https://github.com/Kittiyayaong/ProjectWandooMDC/blob/main/CWPP%20-%20Module01.%20Agentless%20container%20vulnerability%20assessment%20scanning.md
-)
+### 🔗 [다음 Lab으로 이동하기 »](https://github.com/Kittiyayaong/ProjectWandooMDC/blob/main/CWPP%20-%20Module01.%20Agentless%20container%20vulnerability%20assessment%20scanning.md)
