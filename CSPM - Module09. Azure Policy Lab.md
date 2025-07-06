@@ -1,6 +1,6 @@
 # Module 9 - Azure Policy Lab
 
-# 🎯 **목표**
+# **목표**
 Azure Policy를 활용해 조직의 클라우드 리소스 거버넌스를 강화한다.  
 특히,
 * ✔**Allowed Locations 정책** ➔ **배포 지역 규정 준수(Data Residency Compliance)**
@@ -12,7 +12,7 @@ Azure Policy를 활용해 조직의 클라우드 리소스 거버넌스를 강�
 - Azure Subscription Owner/Contributor 권한
 - Azure Policy Resource Provider 등록 완료
 
-## 📌 **시나리오 배경**
+## **시나리오 배경**
 
 ### **조직 요구사항**
 
@@ -61,6 +61,19 @@ Azure Policy를 할당한 뒤, 실제 리소스들이 정책을 준수하고 있
 ---
 
 ## **Lab 3. Owner Tag Custom Policy 정의 ➔ Assignment ➔ Remediation**
+
+✅ 정책 정보: 모든 Azure 리소스에 대해 Owner 태그가 존재하지 않으면 자동으로 Owner 태그를 추가한다.
+* Owner 태그가 없는 리소스를 Non-compliant으로 표시할 뿐만 아니라, Remediation Task 실행 시 Owner 태그를 자동으로 추가(수정) 합니다.
+
+➡️ 결과:
+조직의 클라우드 거버넌스 수준 강화, 비용/운영 책임 명확화, 규정 준수 확보.
+
+| 단계                     | 설명                                    |
+| ---------------------- | ------------------------------------- |
+| **1. 평가 (If 조건)**      | 리소스에 **Owner 태그가 있는지 없는지** 평가         |
+| **2. 조건 충족 시 (태그 없음)** | `effect: modify`가 작동 ➔ 태그를 **자동 추가**  |
+| **3. 추가되는 태그**         | Key = Owner, Value = Unknown (또는 설정값) |
+
 
 ### **1. Custom Policy 정의**
 
