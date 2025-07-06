@@ -33,3 +33,7 @@
 > ⭐ Tips: <br>
 > 기본적으로 **Other** 카테고리의 정보 유형은 민감한 데이터 검색에서 제외됩니다.
 
+
+
+### 🔗 [다음 Lab으로 이동하기 »](https://github.com/Kittiyayaong/ProjectWandooMDC/blob/main/CSPM%20-%20Module07.%20EASM.md)
+
