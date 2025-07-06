@@ -1,7 +1,14 @@
 # Module 3 - Secure Posture
 
-## Secure Posture이란? 
-**보안 태세 (Security Posture)**는 클라우드 리소스의 보안 상태를 평가하고, 보안 점수를 통해 현재 보안 상태를 한눈에 파악할 수 있게 합니다. 보안 점수는 Microsoft 클라우드 보안 벤치마크(MCSB)와 같은 보안 표준에 대한 평가를 기반으로 합니다. 이를 통해 조직은 보안 태세를 개선하기 위한 실질적인 단계를 밟을 수 있습니다.
+## ✅ Secure Posture란?
+
+**보안 태세 (Security Posture)**  
+- 클라우드 리소스의 보안 상태를 평가  
+- **보안 점수(Secure Score)** 로 현재 상태를 시각화  
+- Microsoft Cloud Security Benchmark(MCSB) 등 표준 기반 평가  
+- 조직은 이를 통해 **Remediation(시정 조치) 우선순위**를 결정
+
+---
 
 ### Lab 1: 컨테이너의 취약성 평가
 
@@ -16,8 +23,14 @@ Microsoft Defender for Cloud는 ACR에 푸시되거나 가져온 이미지, 또�
 
 3. Create 클릭
 4. Create container registry에서 detail한 정보 기입 후 Review + Create
-![image](https://github.com/user-attachments/assets/d4010fcf-a002-4b63-9e57-25db6a0b3a29)
-
+> ✅ **실습 Lab 기준**
+  > - Subscription: 본인 Subscription
+  > - Resource group: 새로 생성 (ex. wandoo-mdc)  
+  > - Registry name: 고유한 이름 (ex. wandootestcontainer1 (user number))
+  > - Location: Korea Central
+  > - Domain name label scope: Unsecure
+  > - Pricing plan: Standard
+  > - Role assignment permissions mode: RBAC Registry Permissions
 
 #### Lab 1-2. 취약점이 있는 컨테이너 레지스트리 이미지를 시뮬레이션하기 위해 ACR 작업 명령어와 샘플 이미지를 사용합니다.
 
