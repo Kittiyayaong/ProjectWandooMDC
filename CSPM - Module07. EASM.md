@@ -102,3 +102,7 @@ Defender EASM 리소스 내 왼쪽 탐색 창의 관리 섹션에서 정책을 �
 4. 생성된 정책엔진 확인
   ![image](https://github.com/user-attachments/assets/82b470cb-def3-4501-98c5-133b290a757d)
 
+
+
+
+### 🔗 [다음 Lab으로 이동하기 »](https://github.com/Kittiyayaong/ProjectWandooMDC/blob/main/CSPM%20-%20Module08.%20Contextual%20Security%20capabilities%20for%20AWS%20using%20Defender%20CSPM.md)
