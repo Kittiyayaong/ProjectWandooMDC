@@ -1,5 +1,7 @@
 # Module 02 - Regulatory Compliance
 
+## Wandoo-KT는 이번 랩에서는 Lab 3~5만 진행합니다.
+
 ## 목표
 Microsoft Defender for Cloud의 규정 준수 대시보드를 통해 특정 표준에 대한 리소스의 상태를 평가하여 고객이 이러한 요구 사항을 충족할 수 있도록 지원합니다
 
@@ -11,6 +13,8 @@ Microsoft Defender for Cloud의 규정 준수 대시보드를 통해 특정 표�
   * 규정 준수 상태 모니터링.
   * 규정 준수 대시보드 제공.
 
+---
+
 ### Lab 1: Adding new standards in Azure and multicloud
 
 1.	MDC Console에서 Cloud Security >  Regulatory Compliance > 상단에 Manage compliance policies > 테스트 대상인 Subscription > Security policies로 이동합니다.
@@ -19,8 +23,6 @@ Microsoft Defender for Cloud의 규정 준수 대시보드를 통해 특정 표�
 AWS 또는 GCP에서 표준을 할당하려면 AWS 또는 GCP 연결을 선택한 다음 **Security Policy**로 직접 이동합니다. 세 클라우드 모두에서 사용 가능한 규정 준수 표준은 [여기](https://learn.microsoft.com/en-us/azure/defender-for-cloud/concept-regulatory-compliance-standards#available-compliance-standards) 에 문서화되어 있습니다.
 
 3. *CIS Microsoft Azure Foundations Benchmark v2.0.0*를 찾아 클릭합니다. 
-5. Effect항목에서 **audit** 과 **manual**로 설정된 내용을 확인합니다. 
-<img src="https://github.com/user-attachments/assets/1b5f7e6b-014f-42cc-abd2-5b76072814ed" alt="image" width="700" height="300">
 
 > ⭐ Tips: <br>
 > * **Audit effect**: 리소스가 특정 정책 정의를 준수하지 않을 경우, 정책은 해당 리소스를 비준수(non-compliant)로 표시하고 활동 로그에 경고를 생성하지만 실제 리소스에 대해서는 조치를 취하지 않습니다. 감사 효과에 대한 자세한 내용은 이 [페이지](https://learn.microsoft.com/en-us/azure/governance/policy/concepts/effect-audit)를 방문하세요.
@@ -41,10 +43,14 @@ AWS 또는 GCP에서 표준을 할당하려면 AWS 또는 GCP 연결을 선택�
 > ❗ Important: <br>
 > 변경 사항이 적용될 때까지 2-3시간 소요됩니다. 
 
+---
+
 ### Lab 2: 벤치마크 보고서 
 1. Lab 1의 Standard 페이지로 이동하여, *CIS Microsoft Azure Foundations Benchmark v2.0.0*를 선택합니다. 
 2. 규제 표준 준수 상태를 PDF 보고서 또는 CSV 파일로 내보낼 수 있습니다. 상단 메뉴 모음에서 **Downloaded CSV file**를 선택합니다.
-7. 파일이름 및 파일형식을 지정하여 컴퓨터에 저장됩니다. **CIS Microsoft Azure Foundations Benchmark v2.0.0**을 열고 규정 준수 보고서를 살펴보세요 - 이 보고서는 해당 평가가 관련된 제어 장치에 매핑될 때의 상태를 요약합니다.
+3. 파일이름 및 파일형식을 지정하여 컴퓨터에 저장됩니다. **CIS Microsoft Azure Foundations Benchmark v2.0.0**을 열고 규정 준수 보고서를 살펴보세요 - 이 보고서는 해당 평가가 관련된 제어 장치에 매핑될 때의 상태를 요약합니다.
+
+--- 
 
 ### Lab 3: Custom Standard 생성하기 
 별도의 "벤치마크"를 생성할 수 있으며, "Standard"이라는 용어로 사용됩니다. Standard는 하나 이상의 권장 사항으로 구성될 수 있습니다.
@@ -62,6 +68,8 @@ AWS 또는 GCP에서 표준을 할당하려면 AWS 또는 GCP 연결을 선택�
 4. 새로 생성된 표준이 구독에 적용되는지 확인하려면 Regulatory Compliance 대쉬보드에서 **Status**로 정렬하세요.
 ![module4_customstandard](https://github.com/Azure/Microsoft-Defender-for-Cloud/assets/45104504/aba2680c-9d1e-4fae-bb98-63ea3627c9a4)
 
+---
+
 ### Lab 4: Azure 감사 보고서 
 Microsoft Defender for Cloud에서는 규정 준수 표준에 대한 감사 보고서를 쉽게 작성하고 다운로드할 수 있습니다.
 
@@ -70,7 +78,9 @@ Microsoft Defender for Cloud에서는 규정 준수 표준에 대한 감사 보�
 
 3.	필요한 내용을 다운로드받습니다. ex) Azure 2021 IRS Safeguards Cloud Computing Notification Form
 
-### Lab 6: 시간에 따른 규정 준수 통합 문서
+---
+
+### Lab 5: 시간에 따른 규정 준수 통합 문서
 
 시간 경과에 따른 준수 통합 문서는 대시보드에 추가하는 다양한 표준을 사용하여 시간 경과에 따른 준수 상태를 추적합니다. 자세한 내용은 [여기](https://learn.microsoft.com/en-us/azure/defender-for-cloud/custom-dashboards-azure-workbooks#compliance-over-time-workbook). 이 워크북을 활용하려면 먼저 연속 내보내기를 구성하여 Log Analytics 워크스페이스로 데이터를 내보내야 합니다.
 
