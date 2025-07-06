@@ -14,3 +14,4 @@ Microsoft Defender for Cloud에서 AI 워크로드 계획을 활성화하고 구
 > ⭐ Tips: <br>
 > 자세한 전제 조건은 [document](https://learn.microsoft.com/en-us/azure/defender-for-cloud/ai-onboarding) 에서 확인할 수 있습니다.
 
+### 🔗 [다음 Lab으로 이동하기 Windows »](https://github.com/Kittiyayaong/ProjectWandooMDC/blob/main/CWPP%20-%20Module04.%20AI%20Workloads.md)
