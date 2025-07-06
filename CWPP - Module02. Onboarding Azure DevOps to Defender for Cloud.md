@@ -56,5 +56,5 @@ Azure DevOps는 소프트웨어 개발, 배포, 그리고 협업을 위한 종�
 
 
 
-### 🔗 [다음 Lab으로 이동하기 Windows »](https://github.com/Kittiyayaong/ProjectWandooMDC/blob/main/CWPP%20-%20Module03.%20Protecting%20On-Prem%20Servers%20in%20Defender%20for%20Cloud.md)
-### 🔗 [다음 Lab으로 이동하기 MAC »]()
+### 🔗 [다음 Lab으로 이동하기 Windows »](https://github.com/Kittiyayaong/ProjectWandooMDC/blob/main/CWPP%20-%20Module03.%20(for%20windows)%20Protecting%20On-Prem%20Servers%20in%20Defender%20for%20Cloud.md)
+### 🔗 [다음 Lab으로 이동하기 MAC »](https://github.com/Kittiyayaong/ProjectWandooMDC/blob/main/CWPP%20-%20Module03.%20(for%20MAC)%20Protecting%20On-Prem%20Servers%20in%20Defender%20for%20Cloud.md)
