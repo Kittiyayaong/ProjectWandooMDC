@@ -91,7 +91,7 @@
 
 ### Clean-up AWS Resources
 1. AWS Console > Cloud Formation console > 생성한 Stack 클릭 후 Delete
-   ![image](https://github.com/user-attachments/assets/a2e6f872-d344-4d43-8f47-d8331d8237c9)
+   ![image](https://github.com/Kittiyayaong/ProjectWandooMDC/blob/main/CSPM%20-%20Module09.%20Azure%20Policy%20Lab.md)
 
 
 
