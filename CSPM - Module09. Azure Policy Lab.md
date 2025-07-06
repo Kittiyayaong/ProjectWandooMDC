@@ -70,32 +70,61 @@ Azure Policy를 할당한 뒤, 실제 리소스들이 정책을 준수하고 있
 | 항목 | 값 |
 |--|--|
 | **Definition location** | Subscription |
-| **Name** | Enforce tag: Owner |
+| **Name** | Wandoo Enforce tag: Owner |
 | **Description** | 모든 리소스에 Owner 태그 필수 |
 | **Category** | Tags |
+
+<img width="829" alt="image" src="https://github.com/user-attachments/assets/de393087-fb8f-4e75-9edf-807c25d0e944" />
 
 
 ### **2. Policy Rule 작성**
 
 ```json
 {
-  "if": {
-    "field": "[concat('tags[', parameters('tagName'), ']')]",
-    "exists": "false"
-  },
-  "then": {
-    "effect": "modify",
-    "details": {
-      "roleDefinitionIds": [
-        "/providers/microsoft.authorization/roleDefinitions/<Contributor Role GUID>"
-      ],
-      "operations": [
-        {
-          "operation": "add",
-          "field": "[concat('tags[', parameters('tagName'), ']')]",
-          "value": "[parameters('tagValue')]"
+  "properties": {
+    "displayName": "Enforce tag: Owner",
+    "policyType": "Custom",
+    "mode": "All",
+    "description": "모든 리소스에 Owner 태그 필수",
+    "metadata": {
+      "category": "Tags"
+    },
+    "parameters": {
+      "tagName": {
+        "type": "String",
+        "metadata": {
+          "displayName": "Tag Name",
+          "description": "태그 이름"
         }
-      ]
+      },
+      "tagValue": {
+        "type": "String",
+        "metadata": {
+          "displayName": "Tag Value",
+          "description": "태그 값"
+        }
+      }
+    },
+    "policyRule": {
+      "if": {
+        "field": "[concat('tags[', parameters('tagName'), ']')]",
+        "exists": "false"
+      },
+      "then": {
+        "effect": "modify",
+        "details": {
+          "roleDefinitionIds": [
+            "/providers/microsoft.authorization/roleDefinitions/<Contributor Role GUID>"
+          ],
+          "operations": [
+            {
+              "operation": "add",
+              "field": "[concat('tags[', parameters('tagName'), ']')]",
+              "value": "[parameters('tagValue')]"
+            }
+          ]
+        }
+      }
     }
   }
 }
