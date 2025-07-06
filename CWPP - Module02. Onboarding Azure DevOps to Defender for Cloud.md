@@ -1,17 +1,22 @@
 # Module 2 – Onboarding Azure DevOps to Defender for Cloud
 
 ## 목표
-이번 연습에서는 Azure DevOps 저장소를 Defender for Cloud에 연결하는 방법을 배우게 됩니다.
+Azure DevOps 저장소를 Microsoft Defender for Cloud에 연결하여 코드 및 CI/CD 파이프라인의 보안 posture를 강화합니다.
 
 ## Azure DevOps
 Azure DevOps는 소프트웨어 개발, 배포, 그리고 협업을 위한 종합적인 도구와 서비스를 제공하는 플랫폼입니다. 이 플랫폼은 개발자, 프로젝트 관리자가 협력하여 소프트웨어를 개발하고, 더 빠르게 제품을 개선할 수 있도록 지원합니다
 
-* 주요 기능
-  * Azure Boards: 작업을 계획하고 추적하며, 팀 간의 협업을 돕는 Kanban 보드, 백로그, 그리고 강력한 계획 도구를 제공합니다
-  * Azure Pipelines: 모든 언어와 플랫폼에서 CI/CD(지속적 통합 및 지속적 배포)를 지원하여, 코드를 빌드, 테스트, 배포할 수 있습니다
-  * Azure Repos: 무제한의 클라우드 호스팅 프라이빗 Git 리포지토리를 제공하여, 코드 협업과 파일 관리를 지원합니다
-  * Azure Test Plans: 수동 및 탐색적 테스트 도구를 사용하여, 코드 품질을 개선하고 자신 있게 배포할 수 있습니다
-  * Azure Artifacts: 팀과 패키지를 생성, 호스팅, 공유하며, CI/CD 파이프라인에 아티팩트를 추가할 수 있습니다
+## ✅ **Azure DevOps란?**
+
+Azure DevOps는 소프트웨어 개발, 배포, 협업을 위한 종합 플랫폼으로:
+
+- **Azure Boards**: Kanban, 백로그, 계획 도구
+- **Azure Pipelines**: CI/CD 빌드, 테스트, 배포 자동화
+- **Azure Repos**: Git 기반 코드 저장소
+- **Azure Test Plans**: 수동/탐색적 테스트 관리
+- **Azure Artifacts**: 패키지 생성, 공유, 관리
+
+---
 
 ### Lab 1: Onboarding an Azure DevOps Connector
 
@@ -34,6 +39,7 @@ Azure DevOps는 소프트웨어 개발, 배포, 그리고 협업을 위한 종�
 
 5. 몇 분 후 **Environment Settings** 페이지에 Azure DevOps 커넥터가 표시되고 약 15분 후에는 총 리소스 수가 채워지는 것을 확인할 수 있습니다.
 
+---
 
 ### (Optional) Lab 2: Microsoft Security DevOps Azure DevOps 확장 구성
 
