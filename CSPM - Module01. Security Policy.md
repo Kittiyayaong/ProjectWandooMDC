@@ -76,4 +76,5 @@ Microsoft Defender for Cloud를 시작하려면 Microsoft Azure를 구독해야 
 8. Azure portal에서 **policy** 검색 후 클릭 > Authoring > Exemptions로 이동합니다. 새로 생성한 **Exemption**이 리스트에 포함된 것을 확인합니다.
 
 
-### 🔗 [다음 Lab으로 이동하기 »](https://github.com/Kittiyayaong/ProjectWandooMDC/blob/main/CWPP%20-%20Module03.%20Protecting%20On-Prem%20Servers%20in%20Defender%20for%20Cloud.md)
+
+### 🔗 [다음 Lab으로 이동하기 »](https://github.com/Kittiyayaong/ProjectWandooMDC/blob/main/CSPM%20-%20Module02.%20Regulatory%20Compliance.md)
