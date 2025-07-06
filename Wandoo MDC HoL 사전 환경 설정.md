@@ -7,7 +7,7 @@
 - **Microsoft 계정** - 기존 계정이 없는 경우 무료 계정을 만들기 위해 가입하세요: https://signup.live.com
 
 #### Azure Free trial Instruction:
-1. 웹 브라우저에서 in-private 세션을 열고 [here](https://azure.microsoft.com/en-us/free)으로 이동합니다
+1. 웹 브라우저에서 in-private 세션을 열고 [here](https://azure.microsoft.com/ko-kr/pricing/purchase-options/azure-account)으로 이동합니다
 2. 이 페이지의 주요 부분에서 **무료 시작**을 클릭하고 Microsoft 계정 자격 증명을 사용하여 Azure 포털에 로그인합니다.
 중요 - 회사 사용자와 로그인하지 않았는지 확인합니다.
 3. Microsoft 계정 이메일 주소를 입력한 다음 **다음**을 클릭합니다.
