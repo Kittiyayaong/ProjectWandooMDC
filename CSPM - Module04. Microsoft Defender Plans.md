@@ -54,3 +54,5 @@ Defender Plan은 MDC의 다양한 보안 기능을 활성화하여 클라우드 
 
 > ⭐ Tips: <br>
 >  Azure 정책에서 Microsoft Defender for Cloud 알림에 대한 억제 규칙을 구성하려면 Deploy-라는 기본 정책 정의를 사용하여 관리 그룹 수준에서 억제 규칙을 만들 수 있습니다. 구독 수준에서 알림을 억제하려면 Azure 포털 또는 REST API를 사용할 수 있습니다.
+
+### 🔗 [다음 Lab으로 이동하기 »](https://github.com/Kittiyayaong/ProjectWandooMDC/blob/main/CSPM%20-%20Module05.%20Defender%20CSPM.md)
