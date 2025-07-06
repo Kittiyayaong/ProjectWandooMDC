@@ -140,3 +140,4 @@ Windows 10 Hyper-V 시스템. 이 가이드는 Windows 11에서도 작동합니�
 > ⭐ Tips: <br>
 > Azure Subscription은 약 24시간 후에 이 서버를 감지할 수 있습니다. 이 VM은 Azure에서 온프레미스 서버 역할을 하며, Microsoft Defender for Cloud의 보호를 받게 됩니다.
 
+### 🔗 [다음 Lab으로 이동하기 Windows »](https://github.com/Kittiyayaong/ProjectWandooMDC/blob/main/CWPP%20-%20Module04.%20AI%20Workloads.md)
