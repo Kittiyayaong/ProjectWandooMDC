@@ -21,18 +21,20 @@
    ![image](https://github.com/user-attachments/assets/51d16f46-d335-4c4c-8840-dc9e9ef3712e)
 
 2. 리소스 정보 기입 이후 Review + create 버튼 클릭
+     * Resource group: rg-wandoo-mdc
+     * Name: easmuserX (X = #user) 
    ![image](https://github.com/user-attachments/assets/71fc7ed9-01f5-407e-a2e6-c4b2f65b22cb)
 
-3. Go to Resoure 버튼 클릭
+4. Go to Resoure 버튼 클릭
    ![image](https://github.com/user-attachments/assets/ac9f7f23-f2dd-4cd0-b17f-0c7e4e8f7d2b)
 
-4. Create a custom attack surface 버튼 클릭
+5. Create a custom attack surface 버튼 클릭
   ![image](https://github.com/user-attachments/assets/189d50ca-40e2-4858-ae81-29bb1ade8b9e)
 
-5. Domains 항목에 우리 회사의 홈페이지 주소 www 제외하고 입력 > Next 버튼 클릭 > Confirm 버튼 클릭
+6. Domains 항목에 우리 회사의 홈페이지 주소 www 제외하고 입력 > Next 버튼 클릭 > Confirm 버튼 클릭
   ![image](https://github.com/user-attachments/assets/9fe94270-669f-4d38-b692-3f306a2cfb2c)
 
-6. 공격 표면을 형성하고 있으며 30일 Trial 기간이 시작되었다는 메시지 확인 (최대 48시간 이내에 공격 표면 스캔 완료)
+7. 공격 표면을 형성하고 있으며 30일 Trial 기간이 시작되었다는 메시지 확인 (최대 48시간 이내에 공격 표면 스캔 완료)
   ![image](https://github.com/user-attachments/assets/59198b4d-6456-4a4b-82b6-431dc171e420)
 
 
