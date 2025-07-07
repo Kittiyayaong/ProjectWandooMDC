@@ -46,6 +46,7 @@ az aks create \
 | **역할**                | Subscription이 해당 서비스를 사용할 수 있도록 **권한을 등록**하는 개념              |
 
 * 등록 필요한 namespace list
+  
 | 작업                                                               | 의미                                                         |
 | ---------------------------------------------------------------- | ---------------------------------------------------------- |
 | `az provider register --namespace Microsoft.ContainerService`    | ➔ 내 Subscription에서 **AKS (Kubernetes Service)를 쓸 수 있게 등록** |
