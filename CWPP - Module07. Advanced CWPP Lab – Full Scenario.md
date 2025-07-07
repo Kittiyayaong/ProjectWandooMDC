@@ -209,6 +209,21 @@ kubectl get pods -A | grep azure
 3. defender 관련 견과값이 나오지 않기 때문에, Azure Arc onboarding + Helm Chart 수동 설치 필요
 
 * Arc onboarding: clustername 및 RG name은 azure portal에서 생성한 클러스터 정보를 통해 확인 가능  
+
+1. Resource Provider 등록: Azure Arc + Connected K8s 사용을 위해서는 Resource Provider 등록이 선행되어야 합니다.
+```bash
+az provider register --namespace Microsoft.Kubernetes
+az provider register --namespace Microsoft.KubernetesConfiguration
+az provider register --namespace Microsoft.ExtendedLocation
+az provider register --namespace Microsoft.ResourceConnector
+```
+
+2. 등록 완료 확인: 출력이 Registered여야 진행 가능
+```bash
+az provider show --namespace Microsoft.Kubernetes --query "registrationState"
+```
+
+3. Arc 연결 
 ```bash
 az connectedk8s connect \
   --name <ClusterName> \
