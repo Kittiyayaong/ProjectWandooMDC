@@ -103,7 +103,7 @@ kubectl create secret docker-registry acr-secret \
 | **Password / Password2** | `<ACR_PASSWORD>` |
 
 
-* DVWA deployment manifest 작성 후 저장 (dvwa-deployment.yaml) -- `<VSCode>`에서 진행 (없으면 다운로드)하며 데스크탑에 저장 후 과정 진행
+* DVWA deployment manifest 작성 후 저장 (dvwa-deployment.yaml) -- `VSCode`에서 진행 (없으면 다운로드)하며 데스크탑에 저장 후 과정 진행
 ```bash
 apiVersion: apps/v1
 kind: Deployment
@@ -155,7 +155,14 @@ kubectl get svc
 
 ### 결과
 ✅ DVWA pod 실행 확인
+```bash
+kubectl get pods
+```
 
+✅ 위 <pod-name>에는 kubectl get pods 명령어에서 나온 pod 이름을 복사해서 사용
+```bash
+kubectl describe pod <pod-name>
+```
 ---
 
 ### Step 3. Defender for Containers agent-based onboarding
