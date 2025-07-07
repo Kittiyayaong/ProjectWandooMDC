@@ -24,6 +24,11 @@ Defender for Containers (CWPP)의 agentless scanning ➔ agent-based runtime pro
 ### Step 1. AKS 클러스터 배포(Windows/mac 동일) 
 **목표:** AKS(AKS = Azure Kubernetes Service) 클러스터 구축 및 실습 환경 준비
 
+> ⭐ Tips. AKS (Azure Kubernetes Service)
+>
+> Azure에서 제공하는 Kubernetes 관리형 서비스 ➔ Kubernetes 클러스터를 Azure가 대신 설치/유지보수 해줌
+> 앱을 배포, 스케일업/다운, 롤링업데이트 등 자동화 가능
+
 < GUI > 
 * AKS 클러스터 생성
 → Azure Portal ➔ Kubernetes services ➔ Create ➔ Cluster 생성 wizard
@@ -47,7 +52,7 @@ az aks create \
 
 > ⭐ Tips. Namespace란?
 >
-> * Azure에서의 namespace = Resource Provider
+> * Azure에서의 namespace = Resource Provider = 클러스터 안에서 리소스를 논리적으로 구분하는 공간
 > * 기본적으로 비활성화(unregistered)상태이기 때문에, 사용전에 register 명령으로 사용 가능하도록 등록
 > 
 |                       |                                                              |
@@ -71,7 +76,7 @@ az provider show --namespace Microsoft.Insights --query "registrationState"
 az provider show --namespace Microsoft.OperationalInsights --query "registrationState"
 ```
 
-* AKS 클러스터 인증 구성
+* AKS 클러스터 인증 구성: Azure AKS 클러스터와 로컬 kubectl(PC의 Kubernetes CLI)을 연결하는 과정으로, Azure에서 클러스터 인증 정보(Kubeconfig)를 가져와서 PC의 ~/.kube/config 파일에 등록 (PC(kubectl)에서 Azure의 AKS 클러스터에 명령어를 직접 넣을 수 있도록 연결하는 과정)
 ```bash
 az aks get-credentials --resource-group CWPP-Lab-RG --name cwppaks
 ```
@@ -86,7 +91,7 @@ kubectl get nodes
 
 ---
 
-### Step 2. ACR 통합 + 취약 이미지 배포
+### Step 2. ACR(Azure Container Registry)통합 + 취약 이미지 배포 -- AKS가 ACR에 있는 이미지에 접근할 수 있도록 권한을 부여하는 것
 **목표:** ACR에서 취약 이미지를 pull하여 AKS에 배포
 
 < GUI > 
@@ -94,12 +99,14 @@ kubectl get nodes
 → 클러스터 ➔ Workloads ➔ Deploy ➔ YAML 입력 또는 Quick deployment
 
 < CLI >
+
 * Container 로그인 (Mac의 경우 Docker Desktop 앱이 실행되고 있어야 함)
 ```bash
 # ACR login
 az acr login --name <YourContainerRegistryName>
 ```
-* imagePullSecret 생성
+
+* imagePullSecret 생성: 쿠버네티스가 ACR에서 이미지를 가져올 때 사용할 인증 정보 저장소로, AKS가 ACR에서 이미지를 pull 할 때 이 시크릿을 사용해서 인증
 ```bash
 kubectl create secret docker-registry acr-secret \
   --docker-server=<YourContainerRegistryName>.azurecr.io \
@@ -119,6 +126,11 @@ kubectl create secret docker-registry acr-secret \
 
 
 * DVWA deployment manifest 작성 후 저장 (dvwa-deployment.yaml) -- `VSCode`에서 진행 (없으면 다운로드)하며 데스크탑에 저장 후 과정 진행 -- DVWA 이미지를 명시한 yaml 파일을 kubectl apply로 배포
+
+> ⭐ Tips. 이미지 설명
+> Azure에 저장해둔 DVWA 웹앱을 Kubernetes에 배포 + 공개해서, 브라우저에서 DVWA를 열고 해킹 실습을 할 수 있게 해주는 설정 파일이다.
+> DVWA: “Damn Vulnerable Web Application” = 의도적으로 취약하게 만들어진 PHP/MySQL 기반 웹앱으로 웹 해킹, 취약점 학습, 보안 실습용 표준 훈련 플랫폼
+
 ```bash
 apiVersion: apps/v1
 kind: Deployment
@@ -162,7 +174,7 @@ cd ~/Desktop
 kubectl apply -f dvwa-deployment.yaml
 ```
 
-* 배포 상태 확인
+* 배포 상태 확인 (Pod: Kubernetes에서 가장 작은 배포 단위)
 ```bash
 kubectl get pods
 kubectl get svc
