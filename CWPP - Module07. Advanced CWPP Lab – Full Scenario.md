@@ -1,4 +1,4 @@
-<img width="682" alt="image" src="https://github.com/user-attachments/assets/8465ddd6-03fc-440a-88b1-4b1bffe1276a" /># Module 7. Advanced CWPP Lab – Full Scenario
+# Module 7. Advanced CWPP Lab – Full Scenario
 
 ## 목표
 Defender for Containers (CWPP)의 agentless scanning ➔ agent-based runtime protection ➔ VM 보호 기능(JIT, AAC, FIM)까지 end-to-end 보안 시나리오 실습
@@ -34,23 +34,30 @@ az aks create \
   --generate-ssh-keys
 ```
 
-> ⭐ Troubleshooting. Microsoft.OperationalInsights 리소스 프로바이더가 등록(Registered)
+> ⭐ Tips. Namespace란?
 >
-> (MissingSubscriptionRegistration) The subscription is not registered to use namespace 'Microsoft.OperationalInsights'와 같은 오류 발생 시, **--enable-addons monitoring** 옵션은 Log Analytics Workspace를 사용하므로 하기와 같이, 등록하여 해결. 
->```bash
-> az provider register --namespace Microsoft.OperationalInsights
->```
-> 등록 확인
->```bash
-> az provider show --namespace Microsoft.OperationalInsights --query "registrationState"
->```
+> * Azure에서의 namespace = Resource Provider
+> * 기본적으로 비활성화(unregistered)상태이기 때문에, 사용전에 register 명령으로 사용 가능하도록 등록
+> 
+|                       |                                                              |
+| --------------------- | ------------------------------------------------------------ |
+| **Resource Provider** | Azure에서 특정 **서비스나 리소스를 관리하는 논리 단위**                          |
+| **Namespace**         | Resource Provider의 고유 이름 <br>(예: Microsoft.ContainerService) |
+| **역할**                | Subscription이 해당 서비스를 사용할 수 있도록 **권한을 등록**하는 개념              |
+
+* 등록 필요한 namespace list
+| 작업                                                               | 의미                                                         |
+| ---------------------------------------------------------------- | ---------------------------------------------------------- |
+| `az provider register --namespace Microsoft.ContainerService`    | ➔ 내 Subscription에서 **AKS (Kubernetes Service)를 쓸 수 있게 등록** |
+| `az provider register --namespace Microsoft.Insights`            | ➔ **Monitoring, Metrics 기능**을 쓸 수 있게 등록                    |
+| `az provider register --namespace Microsoft.OperationalInsights` | ➔ **Log Analytics Workspace 기능**을 쓸 수 있게 등록                |
 
 
 * AKS 클러스터 인증 구성
 ```bash
 az aks get-credentials --resource-group CWPP-Lab-RG --name cwppaks
 ```
-
+ 
 * 노드 풀 확인
 ```bash
 kubectl get nodes
