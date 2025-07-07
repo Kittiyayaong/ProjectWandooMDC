@@ -192,7 +192,7 @@ kubectl describe pod <pod-name>
 ```
 ---
 
-### Step 3. Defender for Containers agent-based onboarding
+### Step 3. Defender for Containers agent-based onboarding 
 **목표:** runtime protection 기능 활성화
 
 * Portal에서 defender for container **On**
