@@ -12,6 +12,13 @@ Defender for Containers (CWPP)의 agentless scanning ➔ agent-based runtime pro
 6. JIT / AAC / FIM 설정 (노드풀 VM)
 7. Alert & Recommendation 분석
 
+| **Step**   | **주요 작업**                                         | **목적**                                              | **Agentless / Agent-based**                                  |
+| ---------- | ------------------------------------------------- | --------------------------------------------------- | ------------------------------------------------------------ |
+| **Step 1** | AKS 클러스터 배포                                       | Kubernetes 환경 구축 (실습 인프라 준비)                        | ⚫ 준비 단계 (Agentless/Agent-based 모두 prerequisite)              |
+| **Step 2** | ACR 통합 + DVWA 취약 이미지 배포                           | 취약한 컨테이너 이미지 배포 ➔ Defender가 이미지 취약점 평가 가능           | 🔵 **Agentless 기능** (Container image vulnerability scanning) |
+| **Step 3** | Defender for Containers Enable + agent onboarding | runtime protection agent 배포 ➔ Pod/Node의 행동 기반 위협 탐지 | 🔴 **Agent-based 기능** (runtime protection, threat detection) |
+
+
 --- 
 
 ## Lab 진행 
@@ -192,41 +199,12 @@ kubectl get daemonset -A | grep azure
 kubectl get pods -A | grep azure
 ```
 
-
-* Mac에서 Helm 설치하기
-```bash
-brew install helm
-```
-
-* Helm 설치 완료 후 확인
-```bash
-helm version
-```
-
-* helm repo 추가 (디바이스에서 이어 진행) 
-```bash
-helm repo add azure-defender https://raw.githubusercontent.com/Azure/azure-defender-for-kubernetes/main/charts
-helm repo update
-```
-
-* Helm install
-```bash
-helm install azure-defender-for-kubernetes azure-defender/azure-defender-for-kubernetes
-```
-
-> ⭐ Tips. Helm?
-> Helm = Kubernetes의 패키지 매니저
-> * Linux에서 apt 또는 yum 같은 패키지 매니저가 있듯, Kubernetes에는 Helm이 있음
-> * Helm은 복잡한 Kubernetes 리소스(Deployment, Service, ConfigMap 등)를 **하나의 Chart(패키지)**로 관리, 설치, 업그레이드, 삭제 가능
-
-
-3. DaemonSet 배포 확인
-```bash
-kubectl get daemonset -n azure-defender
-```
-
 ### 결과
 ✅ agent-based protection 활성화 완료
+
+> ⭐ Tips. 
+>
+> Agentless는 클라우드 메타데이터를 통해 분석, Agent-based는 노드 내부 runtime activity를 탐지하므로 둘 다 구성해야 완전한 Defender for Containers 기능을 사용할 수 있습니다.
 
 ---
 
