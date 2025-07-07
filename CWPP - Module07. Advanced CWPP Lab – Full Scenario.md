@@ -204,12 +204,26 @@ kubectl get pods -A | grep azure
 
 > ⭐ Tips. 
 >
-> Agentless는 클라우드 메타데이터를 통해 분석, Agent-based는 노드 내부 runtime activity를 탐지하므로 둘 다 구성해야 완전한 Defender for Containers 기능을 사용할 수 있습니다.
+> Agentless는 클라우드 메타데이터를 통해 분석, Agent-based는 노드 내부 runtime activity를 탐지하므로 둘 다 구성해야 완전한 Defender for Containers 기능을 사용
+> 
+> 사용 이유
+> * 이미지 스캔, 취약점 진단 ➔ 배포 전에만 보안 검증 가능
+> * 배포 후에는 새로운 취약점이 나올 수도 있고, 컨테이너 내부에서 공격자가 명령을 실행할 수도 있음
+>
+> Runtime Protection 역할
+> * 컨테이너가 실행 중일 때: 누군가가 이상한 프로세스를 실행한다거나, 의심스러운 네트워크 통신을 시도한다거나, 비정상적인 시스템 호출이 발생할 때
+> * 실시간으로 탐지하고 Alert를 생성함
 
 ---
 
 ### Step 4. Runtime protection 기능 검증
 **목표:** 실행 중인 컨테이너 보호 기능 확인
+
+> ⭐ Tips. Runtime Protection 기능이란?
+>
+> * 컨테이너가 실행되는 중(runtime) 에 일어나는 이상 행위, 악성 행위, 취약점 악용 행위를 탐지하고 보호하는 기능
+
+
 
 * Pod name
 kubectl get pods
@@ -221,6 +235,11 @@ kubectl get pods
 > ```
 >  `dvwa-5f8d94d75f-abcde` ➔ 이게 pod name
 
+> ⭐ Tips. DVWA pod이란? (DVWA = Damn Vulnerable Web Application)
+>
+> * 보안 실습 업계에서 표준적으로 쓰이는 오픈소스 취약 웹앱
+> * 웹 취약점 실습을 위한 고의적으로 취약한 웹 애플리케이션으로, 보안 실습과 훈련용으로 사용됨
+> * 이번 Lab에서 Docker Hub에서 vulnerables/web-dvwa 이미지를 pull 하여 AKS 클러스터에 배포했음
 
 * DVWA pod 진입
 ```bash
