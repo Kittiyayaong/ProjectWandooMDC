@@ -230,10 +230,30 @@ az connectedk8s connect \
   --resource-group <ResourceGroupName>
 ```
 
-* Helm repo 추가
+* Helm 설치
+
+> ⭐ Tips. Helm
+>
+> * Helm: K8s 패키지 매니저 (brew, apt 같은 역할)
+> * Chart: K8s 앱 설치 패키지
+>   * 특히, Defender for Containers Helm chart ➡️ 마이크로소프트가 만든 보안 agent 설치 메뉴
+>   * 이 chart를 설치하면, Defender agent가 Pod에 자동 설치되어 컨테이너를 실시간으로 감시 가능
+
+1. Helm repo 추가
 ```bash
 helm repo add azure-defense https://raw.githubusercontent.com/Azure/azure-defender-for-kubernetes/main/charts
 helm repo update
+```
+
+2. Helm Chart 설치
+```bash
+helm install azure-defender azure-defense/azure-defender-for-kubernetes
+```
+
+3. 설치 확인
+```bash
+kubectl get daemonset -A | grep defender
+kubectl get pods -A | grep defender
 ```
 
 ### 결과
