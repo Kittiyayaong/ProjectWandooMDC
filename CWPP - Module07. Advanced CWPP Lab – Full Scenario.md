@@ -1,4 +1,4 @@
-# Module 7. (for MAC) Advanced CWPP Lab – Full Scenario
+# Module 7. Advanced CWPP Lab – Full Scenario
 
 ## 목표
 Defender for Containers (CWPP)의 agentless scanning ➔ agent-based runtime protection ➔ VM 보호 기능(JIT, AAC, FIM)까지 end-to-end 보안 시나리오 실습
@@ -8,15 +8,13 @@ Defender for Containers (CWPP)의 agentless scanning ➔ agent-based runtime pro
 2. ACR 통합 + 취약 이미지 배포
 3. Defender for Containers agent-based onboarding
 4. Runtime protection 기능 검증
-5. Admission control policy 구성
-6. JIT / AAC / FIM 설정 (노드풀 VM)
-7. Alert & Recommendation 분석
 
-| **Step**   | **주요 작업**                                         | **목적**                                              | **Agentless / Agent-based**                                  |
-| ---------- | ------------------------------------------------- | --------------------------------------------------- | ------------------------------------------------------------ |
-| **Step 1** | AKS 클러스터 배포                                       | Kubernetes 환경 구축 (실습 인프라 준비)                        | ⚫ 준비 단계 (Agentless/Agent-based 모두 prerequisite)              |
-| **Step 2** | ACR 통합 + DVWA 취약 이미지 배포                           | 취약한 컨테이너 이미지 배포 ➔ Defender가 이미지 취약점 평가 가능           | 🔵 **Agentless 기능** (Container image vulnerability scanning) |
-| **Step 3** | Defender for Containers Enable + agent onboarding | runtime protection agent 배포 ➔ Pod/Node의 행동 기반 위협 탐지 | 🔴 **Agent-based 기능** (runtime protection, threat detection) |
+| **Step**   | **주요 작업**                                             | **목적**                                              | **Agentless / Agent-based**                                    |
+| ---------- | ----------------------------------------------------- | --------------------------------------------------- | -------------------------------------------------------------- |
+| **Step 1** | **AKS 클러스터 배포**                                       | Kubernetes 실습 환경(Cluster + Node Pool) 구축            | ⚫ **Prerequisite** (Agentless / Agent-based 공통 준비 단계)          |
+| **Step 2** | **ACR 통합 + DVWA 취약 이미지 배포**                           | 취약 이미지(DVWA) 배포 ➔ Defender에서 이미지 취약점 평가             | 🔵 **Agentless 기능** <br>Container image vulnerability scanning |
+| **Step 3** | **Defender for Containers Enable + agent onboarding** | runtime protection agent 배포 ➔ Pod/Node의 행동 기반 위협 탐지 | 🔴 **Agent-based 기능** <br>runtime protection, threat detection |
+| **Step 4** | **Runtime protection 기능 검증**                          | runtime protection alert 탐지 실습                      | 🔴 **Agent-based 기능** <br>실행중 컨테이너 이상행위 탐지                     |
 
 
 --- 
@@ -268,54 +266,5 @@ cat /etc/passwd
 * MDC ➔ Alerts에서 탐지 여부 확인
   * MDC > General > Security Alert 에서 확인 
     
----
-
-### Step 5. Admission control policy 구성
-**목표:** 취약 이미지 배포 차단
-
-### 작업
-1. MDC ➔ Defender for Containers ➔ Admission control policy ➔ **Enable**
-2. Policy: High severity vulnerability 이미지 배포 차단
-3. DVWA 취약 이미지 redeploy 시도 ➔ 배포 실패 확인
-
-```bash
-kubectl delete -f dvwa-deployment.yaml
-kubectl apply -f dvwa-deployment.yaml
-```
-
-### 결과
-✅ admission controller 차단 기능 검증
-
----
-
-### Step 6. JIT / AAC / FIM 설정 (노드풀 VM)
-**목표:** CWPP VM 보호 기능 실습
-
-### 작업
-#### 🔹 JIT
-1. MDC ➔ Just-In-Time VM Access ➔ Node pool VM ➔ JIT 구성
-2. SSH 포트 요청 ➔ 승인 ➔ 접속 확인
-
-#### 🔹 AAC
-1. MDC ➔ Adaptive Application Controls ➔ Node pool VM ➔ 정책 적용
-2. 승인되지 않은 binary 실행 ➔ 차단 여부 확인
-
-#### 🔹 FIM
-1. MDC ➔ File Integrity Monitoring ➔ Node pool VM ➔ 보호 경로 파일 변경 ➔ alert 발생 여부 확인
-
-### 결과
-✅ VM 보호 기능 실습 완료
-
----
-
-### Step 7. Alert & Recommendation 분석
-**목표:** 탐지된 alert 및 remediation recommendation 분석
-
-### 작업
-1. MDC ➔ Alerts ➔ Container & VM 탐지 내용 검토
-2. MDC ➔ Recommendations ➔ remediation guidance 확인
-
-### 결과
-✅ CWPP 탐지 및 대응 워크플로우 이해
 
 
