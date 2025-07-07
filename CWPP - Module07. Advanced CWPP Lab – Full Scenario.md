@@ -223,29 +223,32 @@ kubectl get pods -A | grep azure
 >
 > * 컨테이너가 실행되는 중(runtime) 에 일어나는 이상 행위, 악성 행위, 취약점 악용 행위를 탐지하고 보호하는 기능
 
-* Pod name
+| **Pod**            | **용도**                                                                |
+| ------------------ | --------------------------------------------------------------------- |
+| **DVWA pod**       | 취약 이미지 배포 ➔ Defender agentless 스캔 실습                                  |
+| **test-nginx pod** | curl 등 suspicious command 실행 ➔ runtime protection(alert detection) 실습 |
+
+< test-nginx pod에서 실행 >
+* test-nginx pod 생성
+```bash
+kubectl run test-nginx --image=nginx --restart=Never --command -- sleep 3600
+```
+
+* Pod 상태 확인
 ```bash
 kubectl get pods
 ```
 
-> 출력예시
+> ⭐ Tips.  pod 상태가 Pending / CrashLoopBackOff 라면 ➔ 이벤트 확인
 > ```bash
-> NAME                     READY   STATUS    RESTARTS   AGE
-> dvwa-5f8d94d75f-abcde    1/1     Running   0          10m
+> kubectl describe pod test-nginx
 > ```
->  `dvwa-5f8d94d75f-abcde` ➔ 이게 pod name
 
-> ⭐ Tips. DVWA pod이란? (DVWA = Damn Vulnerable Web Application)
->
-> * 보안 실습 업계에서 표준적으로 쓰이는 오픈소스 취약 웹앱
-> * 웹 취약점 실습을 위한 고의적으로 취약한 웹 애플리케이션으로, 보안 실습과 훈련용으로 사용됨
-> * 이번 Lab에서 Docker Hub에서 vulnerables/web-dvwa 이미지를 pull 하여 AKS 클러스터에 배포했음
-
-* DVWA pod 진입
+* Pod로 진입
 ```bash
-kubectl exec -it <dvwa-pod-name> -- /bin/bash
+kubectl exec -it test-ubuntu -- /bin/bash
 ```
-
+  
 * suspicious process 실행 예시
   * /etc/passwd 출력 = 정보수집 공격
   * 패스워드 유출을 통해  ➔ 공격자가 시스템 사용자 정보를 얻어 후속 공격(권한 상승, lateral movement) 기반으로 사용
@@ -256,11 +259,14 @@ ps aux
 cat /etc/passwd
 ```
 
-1. MDC ➔ Alerts에서 탐지 여부 확인
+* 완료후에는 terminal에서 **exit**로 Root 종료
 
 ### 결과
-✅ runtime protection alert 확인
-
+✅ runtime protection alert 확인 
+  
+* MDC ➔ Alerts에서 탐지 여부 확인
+  * MDC > General > Security Alert 에서 확인 
+    
 ---
 
 ### Step 5. Admission control policy 구성
