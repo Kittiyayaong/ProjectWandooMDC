@@ -1,4 +1,4 @@
-# Module 7. Advanced CWPP Lab – Full Scenario
+# Module 7. (for MAC) Advanced CWPP Lab – Full Scenario
 
 ## 목표
 Defender for Containers (CWPP)의 agentless scanning ➔ agent-based runtime protection ➔ VM 보호 기능(JIT, AAC, FIM)까지 end-to-end 보안 시나리오 실습
@@ -172,16 +172,34 @@ kubectl describe pod <pod-name>
 1. MDC ➔ Environment settings ➔ Subscription ➔ Defender Plans ➔ **Defender for Containers Enable**
 2. Onboarding 방법 선택:
    - Azure Policy 자동 배포
-   - 수동 Helm install (선택 시 아래 실행)
+   - 수동 Helm install (선택 시 아래 실행) -- Azure Policy를 통해 자동으로 에이전트 배포하는 대신, 직접 Helm Chart를 내려받아 수동으로 설치하는 방법.
 
+* Mac에서 Helm 설치하기
 ```bash
-# helm repo 추가
+brew install helm
+```
+
+* Helm 설치 완료 후 확인
+```bash
+helm version
+```
+
+* helm repo 추가 (디바이스에서 이어 진행) 
+```bash
 helm repo add azure-defender https://raw.githubusercontent.com/Azure/azure-defender-for-kubernetes/main/charts
 helm repo update
+```
 
-# Helm install
+* Helm install
+```bash
 helm install azure-defender-for-kubernetes azure-defender/azure-defender-for-kubernetes
 ```
+
+> ⭐ Tips. Helm?
+> Helm = Kubernetes의 패키지 매니저
+> * Linux에서 apt 또는 yum 같은 패키지 매니저가 있듯, Kubernetes에는 Helm이 있음
+> * Helm은 복잡한 Kubernetes 리소스(Deployment, Service, ConfigMap 등)를 **하나의 Chart(패키지)**로 관리, 설치, 업그레이드, 삭제 가능
+
 
 3. DaemonSet 배포 확인
 ```bash
