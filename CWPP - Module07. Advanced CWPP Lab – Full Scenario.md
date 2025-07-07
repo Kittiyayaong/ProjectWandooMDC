@@ -19,6 +19,11 @@ Defender for Containers (CWPP)의 agentless scanning ➔ agent-based runtime pro
 ### Step 1. AKS 클러스터 배포(Windows/mac 동일) 
 **목표:** AKS(AKS = Azure Kubernetes Service) 클러스터 구축 및 실습 환경 준비
 
+< GUI > 
+* AKS 클러스터 생성
+→ Azure Portal ➔ Kubernetes services ➔ Create ➔ Cluster 생성 wizard
+
+< CLI >
 * 리소스 그룹 생성
 ```bash
 az group create --name CWPP-Lab-RG --location koreacentral
@@ -79,6 +84,11 @@ kubectl get nodes
 ### Step 2. ACR 통합 + 취약 이미지 배포
 **목표:** ACR에서 취약 이미지를 pull하여 AKS에 배포
 
+< GUI > 
+* 컨테이너 배포(간단한 경우)
+→ 클러스터 ➔ Workloads ➔ Deploy ➔ YAML 입력 또는 Quick deployment
+
+< CLI >
 * Container 로그인 (Mac의 경우 Docker Desktop 앱이 실행되고 있어야 함)
 ```bash
 # ACR login
@@ -168,11 +178,20 @@ kubectl describe pod <pod-name>
 ### Step 3. Defender for Containers agent-based onboarding
 **목표:** runtime protection 기능 활성화
 
-### 작업
+* Portal에서 defender for container **On**
 1. MDC ➔ Environment settings ➔ Subscription ➔ Defender Plans ➔ **Defender for Containers Enable**
 2. Onboarding 방법 선택:
    - Azure Policy 자동 배포
    - 수동 Helm install (선택 시 아래 실행) -- Azure Policy를 통해 자동으로 에이전트 배포하는 대신, 직접 Helm Chart를 내려받아 수동으로 설치하는 방법.
+
+* 정책 자동 배포 상태 확인 및 remediation
+1. Azure Portal ➔ Kubernetes services ➔ 클러스터 선택 > setting ➔ Policies > [Enable add-on] 클릭 ➔ AKS 클러스터에 Azure Policy Add-on이 설치됨 (5~10분 정도 대기 (배포 완료될 때까지))
+2. 배포 확인
+```bash
+kubectl get daemonset -A | grep azure
+kubectl get pods -A | grep azure
+```
+
 
 * Mac에서 Helm 설치하기
 ```bash
