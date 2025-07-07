@@ -36,7 +36,7 @@ az aks create \
 
 > ⭐ Troubleshooting. Microsoft.OperationalInsights 리소스 프로바이더가 등록(Registered)
 >
-> (MissingSubscriptionRegistration) The subscription is not registered to use namespace 'Microsoft.OperationalInsights'. **--enable-addons monitoring** 옵션은 Log Analytics Workspace를 사용하므로 하기와 같이, 등록하여 해결. 
+> (MissingSubscriptionRegistration) The subscription is not registered to use namespace 'Microsoft.OperationalInsights'와 같은 오류 발생 시, **--enable-addons monitoring** 옵션은 Log Analytics Workspace를 사용하므로 하기와 같이, 등록하여 해결. 
 >```bash
 > az provider register --namespace Microsoft.OperationalInsights
 >```
