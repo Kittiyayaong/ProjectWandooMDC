@@ -3,7 +3,7 @@
 ## 목표
 Defender for Containers (CWPP)의 agentless scanning ➔ agent-based runtime protection ➔ VM 보호 기능(JIT, AAC, FIM)까지 end-to-end 보안 시나리오 실습
 
-## ✅ Lab 전체 흐름
+## Lab 전체 흐름
 1. AKS 클러스터 배포
 2. ACR 통합 + 취약 이미지 배포
 3. Defender for Containers agent-based onboarding
