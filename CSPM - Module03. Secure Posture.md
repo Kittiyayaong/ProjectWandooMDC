@@ -43,7 +43,7 @@ Microsoft Defender for Cloud는 ACR에 푸시되거나 가져온 이미지, 또�
   > - Pricing plan: Standard
   > - Role assignment permissions mode: RBAC Registry Permissions
 
-#### Lab 1-2. 취약점이 있는 컨테이너 레지스트리 이미지를 시뮬레이션하기 위해 ACR 작업 명령어와 샘플 이미지를 사용합니다.
+#### Lab 1-2. 취약점이 있는 컨테이너 레지스트리 이미지를 시뮬레이션하기 위해 ACR 작업 명령어와 샘플 이미지를 사용합니다. (Azure trial의 경우 이미지 업로드 불가) 
 
 1. Portal.azure.com 에서 Container registries를 검색하여 들어갑니다. 
 2. Lab 1-1에서 생성한 Container가 리스트에 있음을 확인한 후, 이름이나 컨테이너 레지스트리를 복사합니다.
