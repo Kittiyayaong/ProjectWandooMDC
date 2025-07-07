@@ -253,7 +253,8 @@ kubectl exec -it test-ubuntu -- /bin/bash
   * /etc/passwd 출력 = 정보수집 공격
   * 패스워드 유출을 통해  ➔ 공격자가 시스템 사용자 정보를 얻어 후속 공격(권한 상승, lateral movement) 기반으로 사용
   * Defender for Containers의 Runtime protection 기능에서, suspicious process 실행을 탐지 ➔ Alert 발생 ➔ 대응 조치
-    
+
+* 프로세스 목록 확인 후 Linux 시스템 사용자 정보가 저장된 파일을 출력 ➔ 공격자가 사용자 계정 구조, 기본 권한, 잠재적 취약 계정 확인 가능    
 ```bash
 ps aux
 cat /etc/passwd
