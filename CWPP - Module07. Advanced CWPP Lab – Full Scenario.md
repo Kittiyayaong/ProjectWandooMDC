@@ -223,7 +223,7 @@ az provider register --namespace Microsoft.ResourceConnector
 az provider show --namespace Microsoft.Kubernetes --query "registrationState"
 ```
 
-3. Arc 연결 (최대 10분 소요) 
+3. Arc 연결 (최대 20분 소요 - Lab 클러스터(Standard_B2s)처럼 리소스가 낮으면 설치 속도 느림)
 ```bash
 az connectedk8s connect \
   --name <ClusterName> \
