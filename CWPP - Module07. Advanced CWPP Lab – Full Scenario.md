@@ -206,7 +206,7 @@ kubectl get daemonset -A | grep azure-defender
 kubectl get daemonset -A | grep azure
 kubectl get pods -A | grep azure
 ```
-3. defender 관련 견과값이 나오지 않기 때문에, Azure Arc onboarding + Helm Chart 수동 설치 필요
+3. defender 관련 견과값이 나오지 않기 때문에, Azure Arc 수동 onboarding 필요
 
 * Arc onboarding: clustername 및 RG name은 azure portal에서 생성한 클러스터 정보를 통해 확인 가능  
 
