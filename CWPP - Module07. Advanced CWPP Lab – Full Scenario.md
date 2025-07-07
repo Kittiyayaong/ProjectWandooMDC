@@ -199,9 +199,10 @@ kubectl describe pod <pod-name>
 
 * Portal에서 defender for container **On**
 1. MDC ➔ Environment settings ➔ Subscription ➔ Defender Plans ➔ **Defender for Containers Enable**
-2. Onboarding 방법 선택:
-   * Azure Policy 자동 배포 ➔ 자동으로 DaemonSet 배포
-   * 수동 Helm install ➔ 직접 DaemonSet 배포
+   
+> ⭐ Tips. Onboarding 방법
+> * Azure Policy 자동 배포 ➔ 자동으로 DaemonSet 배포
+> * 수동 Helm install ➔ 직접 DaemonSet 배포
 
 * 배포 확인
 ```bash
