@@ -1,4 +1,4 @@
-# Module 7. Advanced CWPP Lab – Full Scenario
+<img width="682" alt="image" src="https://github.com/user-attachments/assets/8465ddd6-03fc-440a-88b1-4b1bffe1276a" /># Module 7. Advanced CWPP Lab – Full Scenario
 
 ## 목표
 Defender for Containers (CWPP)의 agentless scanning ➔ agent-based runtime protection ➔ VM 보호 기능(JIT, AAC, FIM)까지 end-to-end 보안 시나리오 실습
@@ -16,17 +16,15 @@ Defender for Containers (CWPP)의 agentless scanning ➔ agent-based runtime pro
 
 ## Lab 진행 
 
-### Step 1. AKS 클러스터 배포
+### Step 1. AKS 클러스터 배포(Windows/mac 동일) 
 **목표:** AKS(AKS = Azure Kubernetes Service) 클러스터 구축 및 실습 환경 준비
 
-### 작업(Windows/mac 동일) 
-
-# 리소스 그룹 생성
+* 리소스 그룹 생성
 ```bash
 az group create --name CWPP-Lab-RG --location koreacentral
 ```
 
-# AKS 클러스터 생성
+* AKS 클러스터 생성
 ```bash
 az aks create \
   --resource-group CWPP-Lab-RG \
@@ -36,12 +34,24 @@ az aks create \
   --generate-ssh-keys
 ```
 
-# AKS 클러스터 인증 구성
+> ⭐ Troubleshooting. Microsoft.OperationalInsights 리소스 프로바이더가 등록(Registered)
+>
+> (MissingSubscriptionRegistration) The subscription is not registered to use namespace 'Microsoft.OperationalInsights'. **--enable-addons monitoring** 옵션은 Log Analytics Workspace를 사용하므로 하기와 같이, 등록하여 해결. 
+>```bash
+> az provider register --namespace Microsoft.OperationalInsights
+>```
+> 등록 확인
+>```bash
+> az provider show --namespace Microsoft.OperationalInsights --query "registrationState"
+>```
+
+
+* AKS 클러스터 인증 구성
 ```bash
 az aks get-credentials --resource-group CWPP-Lab-RG --name cwppaks
 ```
 
-# 노드 풀 확인
+* 노드 풀 확인
 ```bash
 kubectl get nodes
 ```
