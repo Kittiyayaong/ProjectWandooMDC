@@ -33,6 +33,8 @@ Defender for Containers (CWPP)의 agentless scanning ➔ agent-based runtime pro
 * AKS 클러스터 생성
 → Azure Portal ➔ Kubernetes services ➔ Create ➔ Cluster 생성 wizard
 
+  <img width="1438" alt="image" src="https://github.com/user-attachments/assets/348191f7-3181-4318-9977-4eeb8e25e627" />
+
 < CLI >
 * 리소스 그룹 생성
 ```bash
@@ -96,7 +98,7 @@ kubectl get nodes
 
 < GUI > 
 * 컨테이너 배포(간단한 경우)
-→ 클러스터 ➔ Workloads ➔ Deploy ➔ YAML 입력 또는 Quick deployment
+→ 클러스터 ➔ Workloads ➔ Deployments ➔ + create > apply a YAML (하단에 이미지 정보 기입) 
 
 < CLI >
 
