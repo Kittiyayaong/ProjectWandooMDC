@@ -1,6 +1,6 @@
 # Module 7. Advanced CWPP Lab – Full Scenario
 
-## 🎯 목표
+## 목표
 Defender for Containers (CWPP)의 agentless scanning ➔ agent-based runtime protection ➔ VM 보호 기능(JIT, AAC, FIM)까지 end-to-end 보안 시나리오 실습
 
 ---
