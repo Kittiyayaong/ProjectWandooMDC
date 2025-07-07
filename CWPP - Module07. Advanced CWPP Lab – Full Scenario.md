@@ -223,7 +223,7 @@ az provider register --namespace Microsoft.ResourceConnector
 az provider show --namespace Microsoft.Kubernetes --query "registrationState"
 ```
 
-3. Arc 연결 
+3. Arc 연결 (최대 10분 소요) 
 ```bash
 az connectedk8s connect \
   --name <ClusterName> \
