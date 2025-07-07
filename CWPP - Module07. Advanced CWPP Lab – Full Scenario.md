@@ -186,15 +186,39 @@ kubectl describe pod <pod-name>
 * Portal에서 defender for container **On**
 1. MDC ➔ Environment settings ➔ Subscription ➔ Defender Plans ➔ **Defender for Containers Enable**
 2. Onboarding 방법 선택:
-   - Azure Policy 자동 배포
-   - 수동 Helm install (선택 시 아래 실행) -- Azure Policy를 통해 자동으로 에이전트 배포하는 대신, 직접 Helm Chart를 내려받아 수동으로 설치하는 방법.
+   * Azure Policy 자동 배포 ➔ 자동으로 DaemonSet 배포
+   * 수동 Helm install ➔ 직접 DaemonSet 배포
+
+* 배포 확인
+```bash
+kubectl get daemonset -A | grep azure-defender
+```
+
+> ⭐ Tips. 값 출력이 안되는경우는, portal에서 defender for container을 **ON**으로 변경했어도 설치가 안된 것으로 ➔ Helm Chart로 수동 설치 필요
+>
+> * AKS (Managed) 클러스터: Defender Plan ➔ ON ➔ 자동 설치 시도
+> * Arc-enabled (On-prem / 다른 클라우드) 클러스터: Defender Plan ➔ ON ➔ 자동 설치 안되며, 무조건 Helm Chart 수동 설치 필요
 
 * 정책 자동 배포 상태 확인 및 remediation
 1. Azure Portal ➔ Kubernetes services ➔ 클러스터 선택 > setting ➔ Policies > [Enable add-on] 클릭 ➔ AKS 클러스터에 Azure Policy Add-on이 설치됨 (5~10분 정도 대기 (배포 완료될 때까지))
-2. 배포 확인
+2. 배포 확인 (DaemonSet 이름에 `azure-defender` 가 포함된 리소스가 보여야 함 -- 예) `azure-defender-ds`)
 ```bash
 kubectl get daemonset -A | grep azure
 kubectl get pods -A | grep azure
+```
+3. defender 관련 견과값이 나오지 않기 때문에, Azure Arc onboarding + Helm Chart 수동 설치 필요
+
+* Arc onboarding: clustername 및 RG name은 azure portal에서 생성한 클러스터 정보를 통해 확인 가능  
+```bash
+az connectedk8s connect \
+  --name <ClusterName> \
+  --resource-group <ResourceGroupName>
+```
+
+* Helm repo 추가
+```bash
+helm repo add azure-defense https://raw.githubusercontent.com/Azure/azure-defender-for-kubernetes/main/charts
+helm repo update
 ```
 
 ### 결과
