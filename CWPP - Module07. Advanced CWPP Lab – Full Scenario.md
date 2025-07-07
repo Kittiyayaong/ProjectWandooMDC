@@ -230,27 +230,7 @@ az connectedk8s connect \
   --resource-group <ResourceGroupName>
 ```
 
-* Helm 설치
-
-> ⭐ Tips. Helm
->
-> * Helm: K8s 패키지 매니저 (brew, apt 같은 역할)
-> * Chart: K8s 앱 설치 패키지
->   * 특히, Defender for Containers Helm chart ➡️ 마이크로소프트가 만든 보안 agent 설치 메뉴
->   * 이 chart를 설치하면, Defender agent가 Pod에 자동 설치되어 컨테이너를 실시간으로 감시 가능
-
-1. Helm repo 추가
-```bash
-helm repo add azure-defense https://raw.githubusercontent.com/Azure/azure-defender-for-kubernetes/main/charts
-helm repo update
-```
-
-2. Helm Chart 설치
-```bash
-helm install azure-defender azure-defense/azure-defender-for-kubernetes
-```
-
-3. 설치 확인
+4. 설치 확인
 ```bash
 kubectl get daemonset -A | grep defender
 kubectl get pods -A | grep defender
@@ -260,16 +240,8 @@ kubectl get pods -A | grep defender
 ✅ agent-based protection 활성화 완료
 
 > ⭐ Tips. 
->
-> Agentless는 클라우드 메타데이터를 통해 분석, Agent-based는 노드 내부 runtime activity를 탐지하므로 둘 다 구성해야 완전한 Defender for Containers 기능을 사용
-> 
-> 사용 이유
-> * 이미지 스캔, 취약점 진단 ➔ 배포 전에만 보안 검증 가능
-> * 배포 후에는 새로운 취약점이 나올 수도 있고, 컨테이너 내부에서 공격자가 명령을 실행할 수도 있음
->
-> Runtime Protection 역할
-> * 컨테이너가 실행 중일 때: 누군가가 이상한 프로세스를 실행한다거나, 의심스러운 네트워크 통신을 시도한다거나, 비정상적인 시스템 호출이 발생할 때
-> * 실시간으로 탐지하고 Alert를 생성함
+> 배포하려는 Pod를 수용할 메모리가 부족해서 스케줄러가 어떤 노드에도 배치불가하여 실질적으로 trial 계정 기반의 랩에서는 사용 불가
+> 차후에 용량 업그레이드 (node-vm-size Standard_B4ms) 혹은, 메모리 충분한 새 nodepool 생성 후 Pod 배포시에 제공 
 
 ---
 
