@@ -31,7 +31,8 @@ az aks create \
   --name cwppaks \
   --node-count 1 \
   --enable-addons monitoring \
-  --generate-ssh-keys
+  --generate-ssh-keys \
+  --node-vm-size Standard_B2s
 ```
 
 > ⭐ Tips. Namespace란?
@@ -49,10 +50,16 @@ az aks create \
   
 | 작업                                                               | 의미                                                         |
 | ---------------------------------------------------------------- | ---------------------------------------------------------- |
-| `az provider register --namespace Microsoft.ContainerService`    | ➔ 내 Subscription에서 **AKS (Kubernetes Service)를 쓸 수 있게 등록** |
-| `az provider register --namespace Microsoft.Insights`            | ➔ **Monitoring, Metrics 기능**을 쓸 수 있게 등록                    |
-| `az provider register --namespace Microsoft.OperationalInsights` | ➔ **Log Analytics Workspace 기능**을 쓸 수 있게 등록                |
+| `az provider register --namespace Microsoft.ContainerService`    | 내 Subscription에서 **AKS (Kubernetes Service)를 쓸 수 있게 등록** |
+| `az provider register --namespace Microsoft.Insights`            | **Monitoring, Metrics 기능**을 쓸 수 있게 등록                    |
+| `az provider register --namespace Microsoft.OperationalInsights` | **Log Analytics Workspace 기능**을 쓸 수 있게 등록                |
 
+* 등록 완료 후 **registered**라고 올라와야함.
+```bash
+az provider show --namespace Microsoft.ContainerService --query "registrationState"
+az provider show --namespace Microsoft.Insights --query "registrationState"
+az provider show --namespace Microsoft.OperationalInsights --query "registrationState"
+```
 
 * AKS 클러스터 인증 구성
 ```bash
@@ -72,18 +79,32 @@ kubectl get nodes
 ### Step 2. ACR 통합 + 취약 이미지 배포
 **목표:** ACR에서 취약 이미지를 pull하여 AKS에 배포
 
-### 작업
+* Container 로그인 (Mac의 경우 Docker Desktop 앱이 실행되고 있어야 함)
 ```bash
 # ACR login
 az acr login --name <YourContainerRegistryName>
-
-# imagePullSecret 생성
+```
+* imagePullSecret 생성
+```bash
 kubectl create secret docker-registry acr-secret \
   --docker-server=<YourContainerRegistryName>.azurecr.io \
   --docker-username=<ACR_USERNAME> \
   --docker-password=<ACR_PASSWORD>
+```
+> ⭐ Tips. username과 Password는 ACR Admin 계정 사용
+>
+> 1. Azure Portal ➔ Container Registry ➔ Settings > Access keys
+> 2. Admin user 를 ON
+> 3. 아래 정보 확인:
+>
+| 항목                       | 의미               |
+| ------------------------ | ---------------- |
+| **Username**             | `<ACR_USERNAME>` |
+| **Password / Password2** | `<ACR_PASSWORD>` |
 
-# DVWA deployment manifest 작성 (dvwa-deployment.yaml)
+
+* DVWA deployment manifest 작성 후 저장 (dvwa-deployment.yaml) -- `<VSCode>`에서 진행 (없으면 다운로드)하며 데스크탑에 저장 후 과정 진행
+```bash
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -116,12 +137,18 @@ spec:
   selector:
     app: dvwa
 ```
-
+* 터미널에서 저장위치(본 랩에서는 데스크탑)로 이동 
 ```bash
-# 배포
-kubectl apply -f dvwa-deployment.yaml
+cd ~/Desktop
+```
 
-# 배포 상태 확인
+* 배포
+```bash
+kubectl apply -f dvwa-deployment.yaml
+```
+
+* 배포 상태 확인
+```bash
 kubectl get pods
 kubectl get svc
 ```
